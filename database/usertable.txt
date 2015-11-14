@@ -1,7 +1,0 @@
-$table->increments('id');
-$table->string('username', 32);
-$table->string('email', 255);
-$table->string('password', 64);
-$table->string('chapter', 32);
-$table->string('role', 32);
-$table->integer('contributions');

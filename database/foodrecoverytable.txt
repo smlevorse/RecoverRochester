@@ -1,4 +1,0 @@
-$table->increments('id');
-$table->string('catname', 32);
-$table->string('description', 32);
-$table->string('poundrecovered', 32);
