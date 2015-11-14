@@ -10,6 +10,15 @@
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
 
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+
+        <style type="text/css">
+
+        
+
+
+        </style>
+
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
@@ -18,6 +27,12 @@
         <![endif]-->
 
         <p>Hello world! This is HTML5 Boilerplate.</p>
+
+        <div class="pure-g">
+        <div class="pure-u-1-3"><p>Thirds</p></div>
+        <div class="pure-u-1-3"><p>Thirds</p></div>
+        <div class="pure-u-1-3"><p>Thirds</p></div>
+        </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
