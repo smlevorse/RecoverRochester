@@ -3,6 +3,7 @@ $table->string('foodname', 32);
 $table->string('category', 32);
 $table->string('chapter', 32);
 $table->date('daterecovered');
+$table->float('poundsrecovered');
 $table->string('recoverylocation', 32);
 $table->string('deliverylocation', 32);
 $table->boolean('delivered');
