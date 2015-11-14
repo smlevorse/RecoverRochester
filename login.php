@@ -22,18 +22,22 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 			<div align=center>
+				<style>
+					p{
+						font-size:14pt;
+						color:#54A636
+					}
+				</style>
         		<form class="pure-form pure-form-stacked">
 					<fieldset>
-						<legend>Login</legend>
+						<legend><p><b>Login</b></p></legend>
+						<label for="username"><p>Username</p></label>
+						<input id="username" type="text" placeholder="Username">
 
-					<label for="username">Username</label>
-					<input id="username" type="text" placeholder="Username">
-
-					<label for="password">Password</label>
-					<input id="password" type="password" placeholder="Password">
-
-
-					<button type="submit" class="pure-button pure-button-primary">Sign in</button>
+						<label for="password">Password</label>
+						<input id="password" type="password" placeholder="Password">
+						<p></p>
+						<button type="submit" class="pure-button pure-button-primary">Sign in</button>
 					</fieldset>
 				</form>
 			</div>
