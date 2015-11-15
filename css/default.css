@@ -43,6 +43,11 @@ header {
 
 header h1{
 	font-size:5em;
+	
+}
+
+header h3{
+	font-size:16pt;
 }
 
 footer {
@@ -68,4 +73,8 @@ li{
 
 ul{
 	list-style-type:none;
+}
+
+h3 {
+	
 }
