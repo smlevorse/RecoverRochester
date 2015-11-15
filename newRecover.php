@@ -67,21 +67,19 @@
 
                     <hr>
 
-                    <!--<div class="pure-control-group">-->
-                        <span style="font-family: Century Gothic; size: 16pt; color: #54A636;">Delivered?</span>
-
+                        
                         <div class="pure-control-group">
+							<span style="font-family: Century Gothic; font-size: 16pt; color: #54A636;">Delivered?</span>
                             <label for="option-two" class="pure-radio">
                                 <input id="option-two" type="radio" name="optionsRadios" value="option1" checked>
                                 Yes
                             </label>
-
+						
                             <label for="option-three" class="pure-radio">
                                 <input id="option-three" type="radio" name="optionsRadios" value="option2">
                                 No
                             </label>
-                        </div>
-                    <!--</div>-->
+						</div>
 
                     <div class="pure-control-group">
                     <label for="date_2"><p>Date Delivered</p></label>
