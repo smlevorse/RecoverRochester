@@ -50,6 +50,11 @@
 	
 				if (!isset($_SESSION['username'])){?>
 					<h2>
+						<style>
+							p{
+								color:#BED8B8;
+							}
+						</style>
 						<div class="pure-menu pure-menu-horizontal">
 						<ul class="pure-menu-list">
 							<li class="pure-menu-item"><a href="login.php" class="pure-menu-link"><p>Login</p></a></li>
