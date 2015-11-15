@@ -36,8 +36,8 @@
 				if ((isset($_SESSION['username']) && isset($_SESSION['loggedIn']))) { 
 			?>
 				 <div class="pure-menu pure-menu-horizontal" align="right">
-					<a href="#" class="pure-menu-heading pure-menu-link">Home</a>
 					<ul class="pure-menu-list">
+                        <li class="pure-menu-item"><a href="dashboard.php" class="pure-menu-link">Home</a></li>
 						<li class="pure-menu-item"><a href="profile.php" class="pure-menu-link">Profile</a></li>
 						<li class="pure-menu-item"><a href="newRecover.php" class="pure-menu-link">Add Recovery</a></li>
 						<li class="pure-menu-item"><a href="logout.php" class="pure-menu-link">Logout</a></li>
