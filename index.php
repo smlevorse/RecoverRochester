@@ -54,7 +54,7 @@
 				Food Circulation Network
 			</h1>
 			<h3>
-				[description]
+				Tracking and analytics for Food Recovery Network chapters.
 			</h3>
 			
 			<?php
