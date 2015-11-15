@@ -31,28 +31,34 @@
 
                     <div class="pure-control-group">
                     <label for="username"><p>Username</p></label>
-                    <input id="username" type="text" placeholder="Username">
+                    <input id="username" type="text" name="username" placeholder="Username">
                     </div>
 
                     <div class="pure-control-group">
                     <label for="email"><p>Email</p></label>
-                    <input id="email" type="email" placeholder="Email">
+                    <input id="email" type="email" name="email" placeholder="Email">
                     </div>
 
 
                     <div class="pure-control-group">
                     <label for="password"><p>Password</p></label>
-                    <input id="password" type="password" placeholder="Password">
+                    <input id="password" type="password" name="password" placeholder="Password">
                     </div>
 
                     <div class="pure-control-group">
                     <label for="chapter"><p>Chapter Name</p></label>
-                    <input id="Chapter Name" type="text" placeholder="Chapter Name">
+                    <input id="Chapter Name" type="text" name="chapter" placeholder="Chapter Name">
                     </div>
 
                     <label for="remember" class="pure-checkbox">
                     <input id="remember" type="checkbox"> Remember me
                     </label>
+
+                    <style scoped>
+                        .button-xlarge{
+                            font-size: 125%;
+                        }
+                    </style>
 
                     <button type="submit" class="button-xlarge pure-button">Register</button>
                 </fieldset>
