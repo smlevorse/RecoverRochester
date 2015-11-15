@@ -70,7 +70,7 @@
                 $_SESSION['username'] = $username;
                 $_SESSION['loggedIn'] = true;
 
-                header("welcome.php");
+                header("location:dashboard.php");
                 exit();
             } else {
                 die("Failed to add user to the database.");
