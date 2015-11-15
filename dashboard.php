@@ -67,8 +67,8 @@
             $sql2 = "SELECT category, SUM(pounds_recovered) AS value_sum FROM rec_and_dist";
 
 
-            $categories = array()
-            $pounds_per_category = array()
+            $categories = array();
+            $pounds_per_category = array();
 
             $result2 = $mysqli->query($sql2);
 
