@@ -1,5 +1,6 @@
 <?php
     session_start();
+    $invalidLogin = false;
 
     $dbhost = "localhost";
     $dbname = "seanmbed_fcn";
@@ -21,6 +22,24 @@
     //Check if the user has submitted the form.
     if ($_SERVER['REQUEST_METHOD'] == "POST") {
     	//Let's check if it's a valid user/pass combination.
+
+    	$username = mysql_real_escape_string($_POST['username']);
+    	$password = md5($mysqli->real_escape_string($_POST['password']));
+
+    	$sql = "SELECT * FROM users WHERE username = '" . $username . "' AND password='" . $password . "'";
+
+    	if (!$result = $mysqli->query($sql)) {
+            //Error running query.
+            die("There was an error running the query: ". $mysqli->error);
+        }
+
+        if ($mysqli->affected_rows == 1) {
+        	//There's a match. Valid user/pass combination.
+        	header("location: dashboard.php");
+        	exit();
+        } else {
+        	$invalidLogin = true;
+        }
     }
 ?>
 
@@ -53,6 +72,9 @@
 						font-size:22pt;
 						color:#54A636;
 					}
+					#error {
+						color: #ff0000;
+					}
 				</style>
         		<form class="pure-form pure-form-aligned" method="POST" action="login.php">
 					<fieldset>
@@ -64,9 +86,13 @@
 						</div>
 						<div class="pure-control-group">
 						<label for="password"><p>Password</p></label>
-						<input id="password" type="password" placeholder="Password" />
+						<input id="password" type="password" name="password" placeholder="Password" />
 						</div>
-						<p></p>
+						<?php 
+							if ($invalidLogin == true) {
+								echo '<p id="error">Invalid username and/or password. Please try again.</p>';
+							}
+						?>
 						<style scoped>
 							.button-xlarge{
 								font-size: 135%;
