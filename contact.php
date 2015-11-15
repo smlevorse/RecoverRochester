@@ -92,11 +92,16 @@
 			</div>
 				<div align=center>
 					<style>
-						p{
-							font-size:16pt;
-							color:#54A636;
-							font-family:"century gothic"
-						}
+						h1{
+                            font-size:22pt;
+                            color:#54A636;
+                            font-family:"century gothic"
+                        }
+                        h2{
+                            font-size:14pt;
+                            color:#54A636;
+                            font-family:"century gothic"
+                        }
 						.error {
 							color: #5A3B1A;
 							font-size:14pt;
@@ -107,10 +112,10 @@
 
 					<form class="pure-form pure-form-aligned" method="POST" action="contact.php">
 						<fieldset>
-							<legend><p><b>Contact</b></p></legend>
+							<legend><h1><b>Contact</b></h1></legend>
 
 							<div class="pure-control-group">
-							<label for="name"><p>Name</p></label>
+							<label for="name"><h2>Name</h2></label>
 							<input id="name" type="text" name="name" placeholder="name" <?php if (isset($name)){echo "value='".$name."'";} ?>  <?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo "value='" . $_POST['name'] . "'"; } ?>>
 							</div>
 
@@ -121,7 +126,7 @@
 							?>
 							
 							<div class="pure-control-group">
-							<label for="email"><p>Email</p></label>
+							<label for="email"><h2>Email</h2></label>
 							<input id="email" type="email" name="email" placeholder="Email" <?php if (isset($email)){echo "value='".$email."'";} ?> <?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo "value='" . $_POST['email'] . "'"; } ?>>
 							</div>
 
@@ -136,7 +141,7 @@
 						</fieldset>
 
 						<fieldset class="pure-group">
-							<label for="message"><p>Message</p></label>
+							<label for="message"><h2>Message</h2></label>
 							<textarea class="pure-input-1-1" name="message" placeholder="Enter your Message"><?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo $_POST['message']; } ?></textarea>
 
 						<?php 

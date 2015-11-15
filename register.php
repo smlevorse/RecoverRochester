@@ -110,13 +110,23 @@
     </head>
     <body>
 		<div class="body">
+        <div class="pure-menu pure-menu-horizontal" align="right">
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="index.php" class="pure-menu-link">Back</a></li>
+            </ul>
+            </div>
 			<div align=center>
 				<style>
-					p{
-						font-size:16pt;
-						color:#54A636;
-						font-family:"century gothic"
-					}
+					h1{
+                    font-size:22pt;
+                    color:#54A636;
+                    font-family:"century gothic"
+                }
+                h2{
+                    font-size:14pt;
+                    color:#54A636;
+                    font-family:"century gothic"
+                }
 					.error {
 						color: #5A3B1A;
 						font-size:14pt;
@@ -126,10 +136,10 @@
 
 				<form class="pure-form pure-form-aligned" method="POST" action="register.php">
 					<fieldset>
-						<legend><p><b>Register</b></p></legend>
+						<legend><h1><b>Register</b></h1></legend>
 
 						<div class="pure-control-group">
-						<label for="username"><p>Username</p></label>
+						<label for="username"><h2>Username</h2></label>
 						<input id="username" type="text" name="username" placeholder="Username" <?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo "value='" . $_POST['username'] . "'"; } ?> >
 						</div>
 
@@ -143,7 +153,7 @@
 						?>
 
 						<div class="pure-control-group">
-						<label for="email"><p>Email</p></label>
+						<label for="email"><h2>Email</h2></label>
 						<input id="email" type="email" name="email" placeholder="Email" <?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo "value='" . $_POST['email'] . "'"; } ?>>
 						</div>
 
@@ -157,7 +167,7 @@
 						?>
 
 						<div class="pure-control-group">
-						<label for="password"><p>Password</p></label>
+						<label for="password"><h2>Password</h2></label>
 						<input id="password" type="password" name="password" placeholder="Password">
 						</div>
 
@@ -168,7 +178,7 @@
 						?>
 
 						<div class="pure-control-group">
-						<label for="passwordVerify"><p>Re-Enter Password</p></label>
+						<label for="passwordVerify"><h2>Re-Enter Password</h2></label>
 						<input id="passwordVerify" type="password" name="passwordVerify" placeholder="Password">
 						</div>
 
@@ -180,7 +190,7 @@
 						
 						
 						<div class="pure-control-group">
-						<label for="name"><p>Full Name</p></label>
+						<label for="name"><h2>Full Name</h2></label>
 						<input id="Full Name" type="text" name="name" placeholder="Full Name" <?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo "value='" . $_POST['chapter'] . "'"; } ?>>
 						</div>
 
@@ -191,7 +201,7 @@
 						?>
 						
 						<div class="pure-control-group">
-						<label for="chapter"><p>Chapter Name</p></label>
+						<label for="chapter"><h2>Chapter Name</h2></label>
 						<input id="Chapter Name" type="text" name="chapter" placeholder="Chapter Name" <?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo "value='" . $_POST['chapter'] . "'"; } ?>>
 						</div>
 

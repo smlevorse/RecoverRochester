@@ -120,19 +120,25 @@
 		</div>
         <div align=center>
             <style>
-                p{
-                    font-size:16pt;
+                h1{
+                    font-size:20pt;
                     color:#54A636;
                     font-family:"century gothic"
                 }
+                h2{
+                    font-size:14pt;
+                    color:#54A636;
+                    font-family:"century gothic"
+                }
+
 
             </style>
 
             <form class="pure-form pure-form-aligned" action="newRecover.php" method="POST">
                 <fieldset>
-                <legend><p><b>Add Recovery</b></p></legend>
+                <legend><p><b><h1>Add Recovery</b></h1></p></legend>
                     <div class="pure-control-group">
-                        <label for="food"><p>Food Name</p></label>
+                        <label for="food"><h2>Food Name</h2></label>
                         <input id="food" type="text" name="food" placeholder="ex. Pizza">
                     </div>
 
@@ -143,7 +149,7 @@
                     ?>
 
                     <div class="pure-control-group">
-                        <label for="category"><p>Category</p></label>
+                        <label for="category"><h2>Category</h2></label>
                             <select id="category" name="category">
                                 <?php
                                     $sql = "SELECT cat_name from food_category";
@@ -158,7 +164,7 @@
 
 
                     <div class="pure-control-group">
-                        <label for="weight"><p>Weight</p></label>
+                        <label for="weight"><h2>Weight</h2></label>
                         <input id="weight" type="float" name = "weight"  placeholder="# Pounds Recovered">
                     </div>
 
@@ -172,12 +178,12 @@
                     <hr>
 
                     <div class="pure-control-group">
-                        <label for="date_1"><p>Date Inventoried</p></label>
+                        <label for="date_1"><h2>Date Inventoried</h2></label>
                         <input id="date_1" type="date" name="date_1" placeholder="MM/DD/YYYY">
                     </div>
 
                     <div class="pure-control-group">
-                        <label for="location_1"><p>Recovery Location</p></label>
+                        <label for="location_1"><h2>Recovery Location</h2></label>
                         <input id="location_1" type="text" name="location_1" placeholder="ex. Gracie's">
                     </div>
 
@@ -191,7 +197,7 @@
 
                         
                         <div class="pure-control-group">
-							<span style="font-family: Century Gothic; font-size: 16pt; color: #54A636;">Delivered?</span>
+							<span style="font-family: Century Gothic; font-size: 14pt; color: #54A636;"><b>Delivered?</b></span>
                             <label for="option-two" class="pure-radio">
                                 <input id="option-two" type="radio" name="optionsRadios" value="True" checked>
                                 Yes
@@ -204,12 +210,12 @@
 						</div>
 
                     <div class="pure-control-group">
-                    <label for="date_2"><p>Date Delivered</p></label>
+                    <label for="date_2"><h2>Date Delivered</h2></label>
                     <input id="date_2" type="date" name="date_2" placeholder="MM/DD/YYYY">
                     </div>
 
                     <div class="pure-control-group">
-                    <label for="location_2"><p>Delivery Location</p></label>
+                    <label for="location_2"><h2>Delivery Location</h2></label>
                     <input id="location_2" type="text" name="location_2" placeholder="ex. Open Door Mission">
                     </div>
 
@@ -220,7 +226,7 @@
                     ?>
 
                     <div class="pure-control-group">
-                    <label for="chapter"><p>Chapter</p></label>
+                    <label for="chapter"><h2>Chapter</h2></label>
                     <select id="chapter" name="chapter">
                         <option value="Recover Rochester">Recover Rochester</option>
                         <option value="Clarkson Carriers">Clarkson Carriers</option>
