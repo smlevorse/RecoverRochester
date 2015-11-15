@@ -81,100 +81,88 @@
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
-    <div class="pure-menu pure-menu-horizontal" align="right">
-        <a href="#" class="pure-menu-heading pure-menu-link">Home</a>
-        <ul class="pure-menu-list">
-            <li class="pure-menu-item"><a href="profile.php" class="pure-menu-link">Profile</a></li>
-            <li class="pure-menu-item"><a href="newRecover.php" class="pure-menu-link">Add Recovery</a></li>
-            <li class="pure-menu-item"><a href="logout.php" class="pure-menu-link">Logout</a></li>
-        </ul>
-    </div>
-        <div align=center>
-            <style>
-                p{
-                    font-size:16pt;
-                    color:#54A636;
-                    font-family:"century gothic"
-                }
-				.error {
-                    color: #5A3B1A;
-					font-size:14pt;
-					strong;
-                }
+		<div class="body">
+			<div class="pure-menu pure-menu-horizontal" align="right">
+				<a href="#" class="pure-menu-heading pure-menu-link">Home</a>
+				<ul class="pure-menu-list">
+					<li class="pure-menu-item"><a href="profile.php" class="pure-menu-link">Profile</a></li>
+					<li class="pure-menu-item"><a href="newRecover.php" class="pure-menu-link">Add Recovery</a></li>
+					<li class="pure-menu-item"><a href="logout.php" class="pure-menu-link">Logout</a></li>
+				</ul>
+			</div>
+				<div align=center>
+					<style>
+						p{
+							font-size:16pt;
+							color:#54A636;
+							font-family:"century gothic"
+						}
+						.error {
+							color: #5A3B1A;
+							font-size:14pt;
+							strong;
+						}
 
-            </style>
+					</style>
 
-            <form class="pure-form pure-form-aligned" method="POST" action="contact.php">
-                <fieldset>
-                    <legend><p><b>Contact</b></p></legend>
+					<form class="pure-form pure-form-aligned" method="POST" action="contact.php">
+						<fieldset>
+							<legend><p><b>Contact</b></p></legend>
 
-                    <div class="pure-control-group">
-                    <label for="name"><p>Name</p></label>
-                    <input id="name" type="text" name="name" placeholder="name" <?php if (isset($name)){echo "value='".$name."'";} ?>  <?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo "value='" . $_POST['name'] . "'"; } ?>>
-                    </div>
+							<div class="pure-control-group">
+							<label for="name"><p>Name</p></label>
+							<input id="name" type="text" name="name" placeholder="name" <?php if (isset($name)){echo "value='".$name."'";} ?>  <?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo "value='" . $_POST['name'] . "'"; } ?>>
+							</div>
 
-					<?php 
-                        if ($invalidname == true) {
-                            echo '<p class="error">Name cannot be empty nor too long.</p>';
-                        }
-                    ?>
-					
-                    <div class="pure-control-group">
-                    <label for="email"><p>Email</p></label>
-                    <input id="email" type="email" name="email" placeholder="Email" <?php if (isset($email)){echo "value='".$email."'";} ?> <?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo "value='" . $_POST['email'] . "'"; } ?>>
-                    </div>
-
-					
-					<?php 
-                        if ($invalidemail == true) {
-                            echo '<p class="error">Email cannot be empty nor too long.</p>';
-                        }
-                    ?>
-					
-                <div class="pure-control<-group">        
-                </fieldset>
-
-                <fieldset class="pure-group">
-                    <label for="message"><p>Message</p></label>
-                    <textarea class="pure-input-1-1" name="message" placeholder="Enter your Message"><?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo $_POST['message']; } ?></textarea>
-
-				<?php 
-                    if ($invalidmessage == true) {
-                        echo '<p class="error">Message cannot be empty.</p>';
-                    }
-                ?>
-					
-                    <button type="submit" class="button-xlarge pure-button">Submit</button>
-                </fieldset>
+							<?php 
+								if ($invalidname == true) {
+									echo '<p class="error">Name cannot be empty nor too long.</p>';
+								}
+							?>
 							
+							<div class="pure-control-group">
+							<label for="email"><p>Email</p></label>
+							<input id="email" type="email" name="email" placeholder="Email" <?php if (isset($email)){echo "value='".$email."'";} ?> <?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo "value='" . $_POST['email'] . "'"; } ?>>
+							</div>
 
-				
-            </form>
+							
+							<?php 
+								if ($invalidemail == true) {
+									echo '<p class="error">Email cannot be empty nor too long.</p>';
+								}
+							?>
+							
+						<div class="pure-control<-group">        
+						</fieldset>
+
+						<fieldset class="pure-group">
+							<label for="message"><p>Message</p></label>
+							<textarea class="pure-input-1-1" name="message" placeholder="Enter your Message"><?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo $_POST['message']; } ?></textarea>
+
+						<?php 
+							if ($invalidmessage == true) {
+								echo '<p class="error">Message cannot be empty.</p>';
+							}
+						?>
+							
+							<button type="submit" class="button-xlarge pure-button">Submit</button>
+						</fieldset>
+									
+
+						
+				</form>
+			</div>
+			<!--[if lt IE 8]>
+				<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+			<![endif]-->
+
+			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
+			<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
+
+			<script src="js/main.js"></script>
         </div>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
-
-        <script src="js/main.js"></script>
-        
-        
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <!--
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        </script>
-        -->
-    </body>
-    <footer>
+		
+        <footer>
             <div class="pure-g">
                 <div class="pure-u-8-24">
                     <img src='http://www.hackrpi.com/assets/logo.png'>
@@ -195,4 +183,18 @@
                     <a href="contact.php">Contact Us</a>
                 </div>
         </footer>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <!--
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+        -->
+    </body>
+    
 </html>
