@@ -54,7 +54,7 @@
                 }
 				.error {
                     color: #5A3B1A;
-					font-size:16pt;
+					font-size:14pt;
 					strong;
                 }
 
@@ -94,15 +94,17 @@
                     <label for="message"><p>Message</p></label>
                     <textarea class="pure-input-1-1" name="message" placeholder="Enter your Message"  <?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo "value='" . $_POST['message'] . "'"; } ?>></textarea>
 
-                    <button type="submit" class="button-xlarge pure-button">Submit</button>
-                </fieldset>
-				
-				
 				<?php 
                     if ($invalidmessage == true) {
                         echo '<p class="error">Message cannot be empty.</p>';
                     }
                 ?>
+					
+                    <button type="submit" class="button-xlarge pure-button">Submit</button>
+                </fieldset>
+				
+				
+
 				
             </form>
         </div>
