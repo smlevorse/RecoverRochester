@@ -1,3 +1,33 @@
+<?php
+	session_start();
+	
+	$invalidname = false;
+	$invalidemail = false;
+	$invalidmessage = false;
+	
+    if ($_SERVER['REQUEST_METHOD'] == "POST") {
+
+		
+		$name = $_POST['name'];
+		$email = $_POST['email'];
+		$message = $_POST['message'];
+	   
+		if (strlen($name) == 0 || strlen($name) > 64){
+			$invalidname = true;
+		}
+		if (strlen($email) == 0 || strlen($email) > 32){
+			$invalidemail = true;
+		}
+		if (strlen($message) == 0 ){
+			$invalidmessage = true;
+		}
+    }
+
+
+
+?>
+
+
 <!doctype html>
 <html class="no-js" lang="">
     <head>
@@ -22,36 +52,58 @@
                     color:#54A636;
                     font-family:"century gothic"
                 }
+				.error {
+                    color: #5A3B1A;
+					font-size:16pt;
+					strong;
+                }
 
             </style>
 
-            <form class="pure-form pure-form-aligned" method="POST" action="register.php">
+            <form class="pure-form pure-form-aligned" method="POST" action="contact.php">
                 <fieldset>
                     <legend><p><b>Contact</b></p></legend>
 
                     <div class="pure-control-group">
                     <label for="name"><p>Name</p></label>
-                    <input id="name" type="text" name="name" placeholder="name">
+                    <input id="name" type="text" name="name" placeholder="name"  <?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo "value='" . $_POST['name'] . "'"; } ?>>
                     </div>
 
+					<?php 
+                        if ($invalidname == true) {
+                            echo '<p class="error">Name cannot be empty nor too long.</p>';
+                        }
+                    ?>
+					
                     <div class="pure-control-group">
                     <label for="email"><p>Email</p></label>
-                    <input id="email" type="email" name="email" placeholder="Email">
+                    <input id="email" type="email" name="email" placeholder="Email"  <?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo "value='" . $_POST['email'] . "'"; } ?>>
                     </div>
 
-                    <div class="pure-control<-group">
-                    
-                    
-
-                    
+					
+					<?php 
+                        if ($invalidemail == true) {
+                            echo '<p class="error">Email cannot be empty nor too long.</p>';
+                        }
+                    ?>
+					
+                <div class="pure-control<-group">        
                 </fieldset>
 
                 <fieldset class="pure-group">
                     <label for="message"><p>Message</p></label>
-                    <textarea class="pure-input-1-1" name="message" placeholder="Enter your Message"></textarea>
+                    <textarea class="pure-input-1-1" name="message" placeholder="Enter your Message"  <?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo "value='" . $_POST['message'] . "'"; } ?>></textarea>
 
                     <button type="submit" class="button-xlarge pure-button">Submit</button>
                 </fieldset>
+				
+				
+				<?php 
+                    if ($invalidmessage == true) {
+                        echo '<p class="error">Message cannot be empty.</p>';
+                    }
+                ?>
+				
             </form>
         </div>
         <!--[if lt IE 8]>
