@@ -24,20 +24,29 @@
 			<div align=center>
 				<style>
 					p{
-						font-size:14pt;
+						font-size:22pt;
 						color:#54A636
 					}
 				</style>
-        		<form class="pure-form pure-form-stacked">
+        		<form class="pure-form pure-form-aligned">
 					<fieldset>
 						<legend><p><b>Login</b></p></legend>
+						
+						<div class="pure-control-group">
 						<label for="username"><p>Username</p></label>
 						<input id="username" type="text" placeholder="Username">
-
-						<label for="password">Password</label>
+						</div>
+						<div class="pure-control-group">
+						<label for="password"><p>Password</p></label>
 						<input id="password" type="password" placeholder="Password">
+						</div>
 						<p></p>
-						<button type="submit" class="pure-button pure-button-primary">Sign in</button>
+						<style scoped>
+							.button-xlarge{
+								font-size: 135%;
+							}
+						</style>
+						<button type="submit" class="button-xlarge pure-button">Sign in</button>
 					</fieldset>
 				</form>
 			</div>
