@@ -30,11 +30,8 @@
 			$messageToSend = "Name: " . $name . "\r\n" .
 			"Reply to: " . $email . "\r\n" .
 			$message;
-			$headers = 'From:' . $email . "\r\n" .
-			'Reply-To: ' .$email . "\r\n" .
-			'X-Mailer: PHP/' . phpversion();
 
-			mail($to, $subject, $messageToSend, $headers);	
+			mail($to, $subject, $messageToSend);	
 			
 			echo "Message Sent";
 		}

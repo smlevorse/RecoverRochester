@@ -54,7 +54,7 @@
 				</div>
 				<div class="pure-u-10-24">
 					<p>
-						Developed for HackRPI, Food Circulation Network is a tool for chapters of the Food Recover Network like Recover Rochester to track and 
+						Developed for HackRPI, Food Circulation Network is a tool for chapters of the Food Recovery Network like Recover Rochester to track and 
 						analyze the food that they have collected and distributed. This tool helps local admins keep a record of distribution locations and how 
 						much of each food category is at each location. 
 					</p>
