@@ -5,6 +5,17 @@
         header("location:login.php");
         exit();
     }
+
+    $dbhost = "localhost";
+    $dbname = "seanmbed_fcn";
+    $dbusername = "seanmbed_admin";
+    $dbpass = "HackRPI2015";
+
+    $mysqli = new mysqli($dbhost, $dbusername, $dbpass, $dbname);
+    if ($mysqli->connect_errno) {
+        echo "Error: Could not connect to database.";
+        die();
+    }
 ?>
 
 <!doctype html>
@@ -49,8 +60,18 @@
 
         <script src="js/main.js"></script>
         
-    <h1>Database Data</h1>
-    <div id="myChart"></div>
+    <strong>
+
+        <!-- CODE BELOW CALCULATES TOTAL POUNDS RECOVERED AND PRINTS IT OUT-->
+        <?php
+            $sql = "SELECT SUM(pounds_recovered) AS value_sum FROM rec_and_dist";
+            $result = $mysqli->query($sql);
+            $resultArray = $result->fetch_array();
+            echo "Total pounds recovered: " . $resultArray['value_sum'];
+        ?>
+        <!-- -->
+
+    </strong>
   </body>
 </html>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
