@@ -24,15 +24,18 @@
 
         1 in 6 Americans struggle with food insecurity. Every 1 in 4 children suffers from hunger. With 15% of Americans living in poverty, many people cannot afford to feed their families.
 
-        Food Recovery Network is a nationwide effort to combat this problem, delivering excess food from college campuses to local shelters and soup kitchens. 
+        <p>Food Recovery Network is a nationwide effort to combat this problem, delivering excess food from college campuses to local shelters and soup kitchens.</p>
+        <img src="https://pbs.twimg.com/media/B_buc10VAAEOWme.jpg">
 
-        In the  Rochester area, there are roughly 30,000 people struggling with food insecurity. With colleges and restaurants in the area throwing out roughly 1 ton of food a day, Recover Rochester works to recover that food and reallocate it to those in need. 
+        <p>In the  Rochester area, there are roughly 30,000 people struggling with food insecurity. With colleges and restaurants in the area throwing out roughly 1 ton of food a day, Recover Rochester works to recover that food and reallocate it to those in need. </p>
+        <img src="https://pbs.twimg.com/media/CFELjhtVEAAneFY.jpg">
 
 
         <h1>Our Mission</h1>
 
-        Working with Recover Rochester, our goal is to provide an insight into the data their members collect. This allows RecRoc members, campus dining services, meal centers, and interested community members to see the impact of the volunteers' efforts. With dozens of newer FRN chapters looking to Recover Rochester for guidance, we hope to make data collection more efficient for all chapters. Providing visual representation will allow students and community members to easily view the impact of their FRN chapter, thus raising awareness about food insecurity and waste. 
-        
+        <p>Working with Recover Rochester, our goal is to provide an insight into the data their members collect. This allows RecRoc members, campus dining services, meal centers, and interested community members to see the impact of the volunteers' efforts. With dozens of newer FRN chapters looking to Recover Rochester for guidance, we hope to make data collection more efficient for all chapters. Providing visual representation will allow students and community members to easily view the impact of their FRN chapter, thus raising awareness about food insecurity and waste. </p>
+        <img src="https://pbs.twimg.com/media/CC4Fx8tW8AESSTB.jpg">
+
         <h1> Who We Are</h1>
 
         <p>Mars Ballantyne
