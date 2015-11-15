@@ -21,6 +21,19 @@
 		if (strlen($message) == 0 ){
 			$invalidmessage = true;
 		}
+		
+		if ($invalidname == false && $invalidemail == false && $invalidmessage == false){
+			
+			
+			$to = 'mxb9328@rit.edu';
+			$subject = 'Contact Form Message';
+			$messageToSend = $message;
+			$headers = 'From: $email' . "\r\n" .
+			'Reply-To: $email' . "\r\n" .
+			'X-Mailer: PHP/' . phpversion();
+
+			mail($to, $subject, $messageToSend, $headers);	
+		}
     }
 
 
