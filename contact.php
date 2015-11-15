@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Register |  Food Circulation Network</title>
+        <title>Contact |  Food Circulation Network</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -27,34 +27,30 @@
 
             <form class="pure-form pure-form-aligned" method="POST" action="register.php">
                 <fieldset>
-                    <legend><p><b>Register</b></p></legend>
+                    <legend><p><b>Contact</b></p></legend>
 
                     <div class="pure-control-group">
-                    <label for="username"><p>Username</p></label>
-                    <input id="username" type="text" placeholder="Username">
+                    <label for="name"><p>Name</p></label>
+                    <input id="name" type="text" name="name" placeholder="name">
                     </div>
 
                     <div class="pure-control-group">
                     <label for="email"><p>Email</p></label>
-                    <input id="email" type="email" placeholder="Email">
+                    <input id="email" type="email" name="email" placeholder="Email">
                     </div>
 
+                    <div class="pure-control<-group">
+                    
+                    
 
-                    <div class="pure-control-group">
-                    <label for="password"><p>Password</p></label>
-                    <input id="password" type="password" placeholder="Password">
-                    </div>
+                    
+                </fieldset>
 
-                    <div class="pure-control-group">
-                    <label for="chapter"><p>Chapter Name</p></label>
-                    <input id="Chapter Name" type="text" placeholder="Chapter Name">
-                    </div>
+                <fieldset class="pure-group">
+                    <label for="message"><p>Message</p></label>
+                    <textarea class="pure-input-1-1" name="message" placeholder="Enter your Message"></textarea>
 
-                    <label for="remember" class="pure-checkbox">
-                    <input id="remember" type="checkbox"> Remember me
-                    </label>
-
-                    <button type="submit" class="button-xlarge pure-button">Register</button>
+                    <button type="submit" class="button-xlarge pure-button">Submit</button>
                 </fieldset>
             </form>
         </div>
