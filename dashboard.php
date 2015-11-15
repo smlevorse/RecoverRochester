@@ -43,8 +43,8 @@
     <body>
 	<div class="body">
 	    <div class="pure-menu pure-menu-horizontal" align="right">
-			<a href="#" class="pure-menu-heading pure-menu-link">Home</a>
 			<ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="dashboard.php" class="pure-menu-link">Home</a></li>
 				<li class="pure-menu-item"><a href="profile.php" class="pure-menu-link">Profile</a></li>
 				<li class="pure-menu-item"><a href="newRecover.php" class="pure-menu-link">Add Recovery</a></li>
 				<li class="pure-menu-item"><a href="logout.php" class="pure-menu-link">Logout</a></li>
@@ -62,87 +62,8 @@
         
         
         <script>
-      <?php
-        /* ACTION REQUIRED: Enter your database information below */
-        
-        /* The host name in which the database is available */
-        $dbhost = "localhost";
-		$dbname = "seanmbed_fcn";
-		$dbusername = "seanmbed_admin";
-		$dbpass = "HackRPI2015";
 
-		$mysqli = new mysqli($dbhost, $dbusername, $dbpass, $dbname);
-		
-			/* 
-			  The query to use. This query selects the `date` and `24h_average` columns
-			  from the `t_baverage` table and orders the results by date in an ascending order 
-			*/
-			$query = "SELECT category, weight from rec_and_dist ORDER BY category ASC";
-			/* ---------------- */
-			$food = []; // Array to hold our date values
-			$weight = []; // Array to hold our series values
-			/* Connect to the database */
-			$mysqli = new mysqli($dbhost, $dbusername, $dbpass);
-			if($mysqli->connect_error) {
-			  die('Connect Error (' . $mysqli->connect_errno . ')' . $mysqli->connect_error);
-			}
-			/* Run the query */
-			if ($result = $mysqli->query($query)) {
-			  /* Fetch the result row as a numeric array */
-			  while( $row = $result->fetch_array(MYSQLI_NUM)){
-				/* Push the values from each row into the $date and $series arrays */
-				array_push($food, $row[0]);
-				array_push($weight, $row[1]);
-			  }
-			  /* Convert each date value to a Unix timestamp, multiply by 1000 for milliseconds */
-			  
-			  /* Free the result set */
-			  $result->close();
-			}
-		  ?>
-		  /* Join the values in each array to create JavaScript arrays */
-		  var categoryValues = [<?php echo join($food, ',') ?>];
-		  var weightValues = [<?php echo join($weight, ',') ?>];
-		  <?php
-			/* Close database connection */
-			$mysqli->close(); 
-		  
-		  ?>
-		</script>
-		<script>
-		window.onload=function(){
-		  zingchart.render({
-			id:"myChart",
-			width:"100%",
-			height:400,
-			data:{
-			  "type":"line",
-			  "title":{
-				"text":"Data Pulled from MySQL Database"
-			  },
-			  "scale-x":{
-				"values": categoryValues,
-				"transform":{
-				  "type":"category",
-				  "item":{
-					"visible":false
-				  }
-				}
-			  },
-			  "plot":{
-				"line-width":1
-			  },
-			  "weight":[
-				{
-				  "values":weightValues
-				}
-			  ]
-			}
-		  });
-		};
-		</script>
-		<h1>Database Data</h1>
-		<div id="myChart"></div>
+
 		
 		
 		
