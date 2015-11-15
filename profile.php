@@ -63,7 +63,14 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
+        <div class="pure-menu pure-menu-horizontal" align="right">
+        <a href="#" class="pure-menu-heading pure-menu-link">Home</a>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="profile.php" class="pure-menu-link">Profile</a></li>
+            <li class="pure-menu-item"><a href="newRecover.php" class="pure-menu-link">Add Recovery</a></li>
+            <li class="pure-menu-item"><a href="logout.php" class="pure-menu-link">Logout</a></li>
+        </ul>
+    </div>
 		<style>
 			table{
 				width: 900px
