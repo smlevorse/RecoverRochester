@@ -109,100 +109,101 @@
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
-        <div align=center>
-            <style>
-                p{
-                    font-size:16pt;
-                    color:#54A636;
-                    font-family:"century gothic"
-                }
-                .error {
-                    color: #5A3B1A;
-					font-size:14pt;
-					strong;
-                }
-            </style>
+		<div class="body">
+			<div align=center>
+				<style>
+					p{
+						font-size:16pt;
+						color:#54A636;
+						font-family:"century gothic"
+					}
+					.error {
+						color: #5A3B1A;
+						font-size:14pt;
+						strong;
+					}
+				</style>
 
-            <form class="pure-form pure-form-aligned" method="POST" action="register.php">
-                <fieldset>
-                    <legend><p><b>Register</b></p></legend>
+				<form class="pure-form pure-form-aligned" method="POST" action="register.php">
+					<fieldset>
+						<legend><p><b>Register</b></p></legend>
 
-                    <div class="pure-control-group">
-                    <label for="username"><p>Username</p></label>
-                    <input id="username" type="text" name="username" placeholder="Username" <?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo "value='" . $_POST['username'] . "'"; } ?> >
-                    </div>
+						<div class="pure-control-group">
+						<label for="username"><p>Username</p></label>
+						<input id="username" type="text" name="username" placeholder="Username" <?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo "value='" . $_POST['username'] . "'"; } ?> >
+						</div>
 
-                    <?php 
-                        if ($invalidUsername == true) {
-                            echo '<p class="error">Usernames must be between 5 and 32 characters long.</p>';
-                        }
-                        if ($takenUsername == true) {
-                            echo '<p class="error">Username is taken. Please try another.</p>';
-                        }
-                    ?>
+						<?php 
+							if ($invalidUsername == true) {
+								echo '<p class="error">Usernames must be between 5 and 32 characters long.</p>';
+							}
+							if ($takenUsername == true) {
+								echo '<p class="error">Username is taken. Please try another.</p>';
+							}
+						?>
 
-                    <div class="pure-control-group">
-                    <label for="email"><p>Email</p></label>
-                    <input id="email" type="email" name="email" placeholder="Email" <?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo "value='" . $_POST['email'] . "'"; } ?>>
-                    </div>
+						<div class="pure-control-group">
+						<label for="email"><p>Email</p></label>
+						<input id="email" type="email" name="email" placeholder="Email" <?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo "value='" . $_POST['email'] . "'"; } ?>>
+						</div>
 
-                    <?php
-                        if ($takenEmail == true) {
-                            echo '<p class="error">Email is taken. Please try another.</p>';
-                        }
-                        if ($invalidEmail == true) {
-                            echo '<p class="error">Invalid email address.</p>';
-                        }
-                    ?>
+						<?php
+							if ($takenEmail == true) {
+								echo '<p class="error">Email is taken. Please try another.</p>';
+							}
+							if ($invalidEmail == true) {
+								echo '<p class="error">Invalid email address.</p>';
+							}
+						?>
 
-                    <div class="pure-control-group">
-                    <label for="password"><p>Password</p></label>
-                    <input id="password" type="password" name="password" placeholder="Password">
-                    </div>
+						<div class="pure-control-group">
+						<label for="password"><p>Password</p></label>
+						<input id="password" type="password" name="password" placeholder="Password">
+						</div>
 
-                    <?php
-                        if ($invalidPassword == true) {
-                            echo '<p class="error">Passwords must be between 5 and 32 characters long.</p>';
-                        }
-                    ?>
+						<?php
+							if ($invalidPassword == true) {
+								echo '<p class="error">Passwords must be between 5 and 32 characters long.</p>';
+							}
+						?>
 
-					<div class="pure-control-group">
-                    <label for="passwordVerify"><p>Re-Enter Password</p></label>
-                    <input id="passwordVerify" type="password" name="passwordVerify" placeholder="Password">
-                    </div>
+						<div class="pure-control-group">
+						<label for="passwordVerify"><p>Re-Enter Password</p></label>
+						<input id="passwordVerify" type="password" name="passwordVerify" placeholder="Password">
+						</div>
 
-                    <?php
-                        if ($mismatchedPassword == true) {
-                            echo '<p class="error">Passwords must match.</p>';
-                        }
-                    ?>
-					
-					
-					<div class="pure-control-group">
-                    <label for="name"><p>Full Name</p></label>
-                    <input id="Full Name" type="text" name="name" placeholder="Full Name" <?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo "value='" . $_POST['chapter'] . "'"; } ?>>
-                    </div>
+						<?php
+							if ($mismatchedPassword == true) {
+								echo '<p class="error">Passwords must match.</p>';
+							}
+						?>
+						
+						
+						<div class="pure-control-group">
+						<label for="name"><p>Full Name</p></label>
+						<input id="Full Name" type="text" name="name" placeholder="Full Name" <?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo "value='" . $_POST['chapter'] . "'"; } ?>>
+						</div>
 
-                    <?php
-                        if ($invalidName == true) {
-                            echo '<p class="error">Name must be between 1 and 64 characters long.</p>';
-                        }
-                    ?>
-					
-                    <div class="pure-control-group">
-                    <label for="chapter"><p>Chapter Name</p></label>
-                    <input id="Chapter Name" type="text" name="chapter" placeholder="Chapter Name" <?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo "value='" . $_POST['chapter'] . "'"; } ?>>
-                    </div>
+						<?php
+							if ($invalidName == true) {
+								echo '<p class="error">Name must be between 1 and 64 characters long.</p>';
+							}
+						?>
+						
+						<div class="pure-control-group">
+						<label for="chapter"><p>Chapter Name</p></label>
+						<input id="Chapter Name" type="text" name="chapter" placeholder="Chapter Name" <?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo "value='" . $_POST['chapter'] . "'"; } ?>>
+						</div>
 
-                    <style scoped>
-                        .button-xlarge{
-                            font-size: 125%;
-                        }
-                    </style>
+						<style scoped>
+							.button-xlarge{
+								font-size: 125%;
+							}
+						</style>
 
-                    <button type="submit" class="button-xlarge pure-button">Register</button>
-                </fieldset>
-            </form>
+						<button type="submit" class="button-xlarge pure-button">Register</button>
+					</fieldset>
+				</form>
         </div>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -212,22 +213,9 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
 
         <script src="js/main.js"></script>
+        </div>
         
-        
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <!--
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        </script>
-        -->
-    </body>
-    <footer>
+		<footer>
             <div class="pure-g">
                 <div class="pure-u-8-24">
                     <img src='http://www.hackrpi.com/assets/logo.png'>
@@ -248,4 +236,17 @@
                     <a href="contact.php">Contact Us</a>
                 </div>
         </footer>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <!--
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+        -->
+    </body>
 </html>

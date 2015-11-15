@@ -35,12 +35,26 @@
 		
 		
 		<header>
+			<style>
+				h1{
+					padding-bottom:0;
+				}
+				
+				h3{
+					margin-top: -3em;
+					margin-bottom: 8em;
+				}
+				
+				body{
+					background-color:#4A9130;
+				}
+			</style>
 			<h1>
 				<img id="logo" src="img/leaf.svg" onerror="this.src='img/leaf.png'"></img>
 				Food Circulation Network
 			</h1>
 			<h3>
-			[description]
+				[description]
 			</h3>
 			
 			<?php

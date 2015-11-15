@@ -75,6 +75,8 @@ ul{
 	list-style-type:none;
 }
 
-h3 {
-	
+.body {
+	min-height:80%;
+	min-height:80vh;
+	padding-bottom:3em;
 }
