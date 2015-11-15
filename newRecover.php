@@ -74,6 +74,7 @@
                 //successfully added a result
                 header("location:dashboard.php");
                 exit();
+                
             }
             else {
                 echo $sql;
@@ -143,12 +144,14 @@
                     <div class="pure-control-group">
                         <label for="category"><p>Category</p></label>
                             <select id="category" name="category">
-                                <option value="Meat">Meat</option>
-                                <option value="Grains">Grains</option>
-                                <option value="Vegetables">Vegetables</option>
-                                <option value="Desserts">Desserts</option>
-                                <option value="Fruit">Fruit</option>
-                                <option value="Other">Other</option>
+                                <?php
+                                    $sql = "SELECT cat_name from food_category";
+                                    $result = $mysqli->query($sql);
+                                    while ($resultArray = $result->fetch_array()) {
+                                        echo "<option value='" . $resultArray['cat_name'] . "'>". $resultArray['cat_name'] . "</option>";
+                                    }
+                                ?>
+                                
                             </select>
                     </div>
 
