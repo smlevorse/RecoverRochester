@@ -104,7 +104,9 @@
                     font-family:"century gothic"
                 }
                 .error {
-                    color: #ff0000;
+                    color: #5A3B1A;
+					font-size:14pt;
+					strong;
                 }
             </style>
 
@@ -151,6 +153,11 @@
                         }
                     ?>
 
+					<div class="pure-control-group">
+                    <label for="password"><p>Re-Enter Password</p></label>
+                    <input id="password" type="password" name="password" placeholder="Password">
+                    </div>
+					
                     <div class="pure-control-group">
                     <label for="chapter"><p>Chapter Name</p></label>
                     <input id="Chapter Name" type="text" name="chapter" placeholder="Chapter Name" <?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo "value='" . $_POST['chapter'] . "'"; } ?>>
