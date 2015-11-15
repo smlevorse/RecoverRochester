@@ -31,56 +31,7 @@
 	margin-top:15em;
 }
 
-.parallax {
-	-webkit-perspective: 10em;
-	perspective: 10em;
-	height: 100%;
-	height: 100vh;
-	overflow-x: hidden;
-	overflow-y: auto;
-	-webkit-perspective-origin-x:75%;
-	perspective-origin-x: 75%;
-}
 
-.parallax_layer {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	-webkit-perspective-origin-x:100%;
-	transform-origin-x: 100%;
-}
-
-.parallax_layer_base {
-	-webkit-transform: translateZ(0);
-	transform: translateZ(0);
-	z-index:4;
-}
-
-.parallax_layer_back {
-	-webkit-transform: translateZ(-300px) scale(4);
-	transform: translateZ(-300px) scale(4);
-	z-index: 3;
-	width:100%;
-	height:100%;
-}
-
-.parallax_layer_back img {
-	max-width:100%;
-	max-height:100%;
-}
-
-.parallax_group {
-	position:relative;
-	height:500%;
-	max-width:100%;
-	max-height:100%;
-	/*height:90vh;*/
-	/*
-	-webkit-transform-style: preserve-3d;*/
-    /*transform: /*preserve-3d;*//*translate3d(700px, 0, -800px);*/
-}
 
 header {
 	background-color:#4A9130;
@@ -103,4 +54,18 @@ footer {
 
 #logo {
 	max-height: 3em;
+}
+
+h2 {
+	font-size:36pt;
+	color:#fff;
+}
+
+li{
+	color:#fff;
+	font-size:24pt;
+}
+
+ul{
+	list-style-type:none;
 }
