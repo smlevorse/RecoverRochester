@@ -26,11 +26,61 @@
 
         <script src="js/main.js"></script>
         
+		
+		
 		<header>
 			<h1>
 				<img id="logo" src="img/leaf.svg" onerror="this.src='img/leaf.png'"></img>
 				Food Circulation Network
 			</h1>
+			
+			<?php
+				session_start();
+			
+				$dbhost = "localhost";
+				$dbname = "seanmbed_fcn";
+				$dbusername = "seanmbed_admin";
+				$dbpass = "HackRPI2015";
+			
+				$mysqli = new mysqli($dbhost, $dbusername, $dbpass, $dbname);
+				if ($mysqli->connect_errno) {
+					echo "Error: Could not connect to database.";
+					die();
+				}
+	
+				if (!isset($_SESSION['username'])){?>
+					<h2>
+						<div class="pure-menu pure-menu-horizontal">
+						<ul class="pure-menu-list">
+							<li class="pure-menu-item"><a href="login.php" class="pure-menu-link"><p>Login</p></a></li>
+							<li class="pure-menu-item"><a href="register.php" class="pure-menu-link"><p>Register</p></a></li>
+						</ul>
+						</div>
+					</h2>
+				<?php
+				} else{?>
+					<h2>
+						<style>
+							p{
+								color:#BED8B8;
+							}
+						</style>
+					
+						<div class="pure-menu pure-menu-horizontal">
+						<ul class="pure-menu-list">
+							<li class="pure-menu-item"><a href="profile.php" class="pure-menu-link"><p>Profile</p></a></li>
+							<li class="pure-menu-item"><a href="newRecover.php" class="pure-menu-link"><p>Add Recovery</p></a></li>
+							<li class="pure-menu-item"><a href="logout.php" class="pure-menu-link"><p>Logout</p></a></li>
+						</ul>
+						</div>
+					</h2>
+				<?php	
+				}
+				?>
+			
+
+			
+			
 		</header>
 		
 		<section class="content">
