@@ -1,36 +1,89 @@
 <?php
-    session_start(); //allows you to access cookies which is helpful since they are logged in to get their username
+    session_start();
+    $invalidFoodName = false;
+    $invalidWeight = false;
+    $invalidRecoveryLocation = false;
+    $invalidDeliveryLocation = false;
+
+
+    $dbhost = "localhost";
+    $dbname = "seanmbed_fcn";
+    $dbusername = "seanmbed_admin";
+    $dbpass = "HackRPI2015";
+
+    $mysqli = new mysqli($dbhost, $dbusername, $dbpass, $dbname);
+    if ($mysqli->connect_errno) {
+        echo "Error: Could not connect to database.";
+        die();
+    }
+
+     //allows you to access cookies which is helpful since they are logged in to get their username
 
     if (!isset($_SESSION["username"])) { //global array, accessing by index
         header("location:login.php");
         exit();
     } 
+    $username = $_SESSION["username"];
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST')  { //if the form has been submitted
-        $food = $_POST['food'];
-        $category = $_POST['category']
-        $weight = $_POST['weight'];
+        $food = addslashes($_POST['food']);
+        $category = $_POST['category'];
+        $weight = floatval($_POST['weight']);
 
-        $date_r = $_POST['date_1'];
-        $date_d = $_POST['date_2'];
 
-        $location_r = $_POST['location_1'];
-        $location_d = $_POST['location_2'];
+        $date_r = strtotime($_POST['date_1']);
+        $date_d = strtotime($_POST['date_2']);
 
+        $delivered = $_POST['optionsRadios'];
+
+        if ($delivered == "True" ){
+            $delivered = 1;
+        }
+        else {
+            $delivered = 0;
+        }
+
+        $location_r = addslashes($_POST['location_1']);
+        $location_d = addslashes($_POST['location_2']);
+
+        $chapter = $_POST['chapter'];
+
+        if (strlen($food) == 0 || strlen($food) > 32 ) {
+            $invalidFoodName = True;
+        }
+
+        if (strlen($weight) == 0) {
+            $invalidWeight = True;
+        }
+
+
+        if (strlen($location_r) == 0 || strlen($location_r) > 32) {
+            $invalidRecoveryLocation = True;
+        }
+        if (strlen($location_d) == 0 || strlen($location_d) > 32) {
+            $invalidDeliveryLocation = True;
+        }
+
+
+        if ($invalidFoodName == false && $invalidWeight == false && $invalidDeliveryLocation == false && $invalidRecoveryLocation == false) {
+            $sql = "INSERT INTO rec_and_dist (id, food_name, category, pounds_recovered, date_recovered, delivered, 
+                recovery_location, delivery_location, chapter, date_delivered, username) 
+                    VALUES ('','".$food."', '".$category."', '".$weight."', '".$date_r."', '".$delivered."', '".$location_r."', 
+                        '".$location_d."', '".$chapter."', '".$date_d."', '".$username."')";
+            if($result = $mysqli->query($sql)) {
+                //successfully added a result
+                header("location:dashboard.php");
+                exit();
+            }
+            else {
+                echo $sql;
+                echo $mysqli->error;
+                die("Failed to add record to database");
+            }
+        }
 
     }
-
-    
-
-
-
-
 ?>
-
-
-
-
-
 
 <!doctype html>
 <html class="no-js" lang="">
@@ -60,13 +113,19 @@
 
             </style>
 
-            <form class="pure-form pure-form-aligned">
+            <form class="pure-form pure-form-aligned" action="newRecover.php" method="POST">
                 <fieldset>
                 <legend><p><b>Add Recovery</b></p></legend>
                     <div class="pure-control-group">
                         <label for="food"><p>Food Name</p></label>
                         <input id="food" type="text" name="food" placeholder="ex. Pizza">
                     </div>
+
+                    <?php
+                        if ($invalidFoodName == true) {
+                            echo '<p class="error">Food must be between 1 and 32 characters long.</p>';
+                        }
+                    ?>
 
                     <div class="pure-control-group">
                         <label for="category"><p>Category</p></label>
@@ -86,6 +145,12 @@
                         <input id="weight" type="float" name = "weight"  placeholder="# Pounds Recovered">
                     </div>
 
+                    <?php
+                        if ($invalidWeight == true) {
+                            echo '<p class="error">Must enter a weight</p>';
+                        }
+                    ?>
+
 
                     <hr>
 
@@ -99,18 +164,24 @@
                         <input id="location_1" type="text" name="location_1" placeholder="ex. Gracie's">
                     </div>
 
+                    <?php
+                        if ($invalidRecoveryLocation == true) {
+                            echo '<p class="error">Recovery Location must be between 1 and 32 characters long.</p>';
+                        }
+                    ?>
+
                     <hr>
 
                         
                         <div class="pure-control-group">
 							<span style="font-family: Century Gothic; font-size: 16pt; color: #54A636;">Delivered?</span>
                             <label for="option-two" class="pure-radio">
-                                <input id="option-two" type="radio" name="optionsRadios" value="option1" checked>
+                                <input id="option-two" type="radio" name="optionsRadios" value="True" checked>
                                 Yes
                             </label>
 						
                             <label for="option-three" class="pure-radio">
-                                <input id="option-three" type="radio" name="optionsRadios" value="option2">
+                                <input id="option-three" type="radio" name="optionsRadios" value="False">
                                 No
                             </label>
 						</div>
@@ -125,9 +196,15 @@
                     <input id="location_2" type="text" name="location_2" placeholder="ex. Open Door Mission">
                     </div>
 
+                    <?php
+                        if ($invalidDeliveryLocation == true) {
+                            echo '<p class="error">Delivery Location must be between 1 and 32 characters long.</p>';
+                        }
+                    ?>
+
                     <div class="pure-control-group">
                     <label for="chapter"><p>Chapter</p></label>
-                    <select id="chapter">
+                    <select id="chapter" name="chapter">
                         <option value="Recover Rochester">Recover Rochester</option>
                         <option value="Clarkson Carriers">Clarkson Carriers</option>
                         <option value="University of Rochester">University of Rochester</option>
