@@ -62,21 +62,23 @@
             $result = $mysqli->query($sql);
             $resultArray = $result->fetch_array();
             echo "Total pounds recovered: " . $resultArray['value_sum'];
-            
-            $totalPounds = $resultArray['value_sum'];
+
+            $total = $resultArray['value_sum'];
             $sql2 = "SELECT category, SUM(pounds_recovered) AS value_sum FROM rec_and_dist";
+
+
             $categories = array();
-            $totalPerCategory = array();
+            $pounds_per_category = array();
+
             $result2 = $mysqli->query($sql2);
 
-            //Loop through the query results.
-            while ($resultArray2 = $result2->fetch_array()) {
-                array_push($categories, $resultArray2['category']);
-                array_push($totalPerCategory, $resultArray2['value_sum'])
-            }
+            while ($result2Array = $result2->fetch_array()) {//while there are still new rows to go through
+                array_push($pounds_per_category, $result2Array['value_sum']);
+            } 
 
         ?>
         <!-- -->
+
 
     </strong>
 </div>
