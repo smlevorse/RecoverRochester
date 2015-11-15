@@ -26,7 +26,7 @@
 			
 			
 			$to = 'mxb9328@rit.edu';
-			$subject = 'Contact Form Message';
+			$subject = 'Food Circulation Network: Contact Form Message';
 			$messageToSend = "Name: " . $name . "\r\n";
 			$messageToSend .= "Reply to: " . $email . "\r\n";
 			$messageToSend .= $message;
@@ -35,6 +35,8 @@
 			'X-Mailer: PHP/' . phpversion();
 
 			mail($to, $subject, $messageToSend, $headers);	
+			
+			echo "Message Sent";
 		}
     }
 
