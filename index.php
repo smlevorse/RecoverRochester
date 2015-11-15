@@ -1,9 +1,9 @@
-
 <?php 
 	session_start();
 	
 	?>
 
+<!DOCTYPE html>
 
 <html class="no-js" lang="">
     <head>
@@ -92,61 +92,6 @@
 			
 			
 		</header>
-		
-		<section class="content">
-			<div class="pure-g">
-				<div class="pure-u-3-24"></div>
-				<div class="pure-u-10-24">
-					<p>
-						In the United States, food insecurity affects 1 in 6 people, or 50 million Americans. The Food Recovery Network is the largest 
-						student movement against food waste and hunger in America. With over 150 chapters spread across 39 states, the organization is quite large.
-						Recover Rochester, founded and run by RIT students, is one of FRN’s largest and most effective chapters. 
-					</p>
-				</div>
-				<div class="pure-u-8-24">
-					<img src="img/hamburger.jpg" alt="woman holding small hamburger" class="img-responsive">
-				</div>
-			</div>
-		</section>
-				
-		<section class="content">
-			<div class="pure-g">
-				<div class="pure-u-3-24"></div>
-				<div class="pure-u-8-24">
-					<img src="img/grapes.jpeg" alt="grapes" class="img-responsive">
-				</div>
-				<div class="pure-u-10-24">
-					<p>
-						Developed for HackRPI, Food Circulation Network is a tool for chapters of the Food Recovery Network like Recover Rochester to track and 
-						analyze the food that they have collected and distributed. This tool helps local admins keep a record of distribution locations and how 
-						much of each food category is at each location. 
-					</p>
-				</div>
-			</div>
-		</section>
-				
-		<footer>
-			<div class="pure-g">
-				<div class="pure-u-8-24">
-					<img src='http://www.hackrpi.com/assets/logo.png'>
-				</div>
-				<div class="pure-u-5-24">
-					<p>
-						Created by:<br>
-						Nathan Holt<br>
-						Maranda DeStefano<br>
-						Mars Ballantyne<br>
-						Sean Levorse
-					</p>
-				</div>
-				<div class="pure-u-5-24">
-					<a href="about.php">About Us</a>
-				</div>
-				<div class="pure-u-5-24">
-					<a href="contact.php">Contact Us</a>
-				</div>
-		</footer>
-        
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <!--
