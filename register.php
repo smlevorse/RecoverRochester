@@ -6,6 +6,7 @@
     $mismatchedPassword = false;
     $invalidEmail = false;
     $takenEmail = false;
+    $invalidName = false;
 
     $dbhost = "localhost";
     $dbname = "seanmbed_fcn";
@@ -32,6 +33,7 @@
         $password2 = $_POST['passwordVerify'];
         $email = $_POST['email'];
         $chapter = $_POST['chapter'];
+        $name = $_POST['name'];
 
         //Check if username and password are the right length.
         if (strlen($username) < 5 || strlen($username) > 32) {
@@ -43,6 +45,10 @@
 
         if ($password != $password2) {
             $mismatchedPassword = true;
+        }
+
+        if (strlen($name) < 1 || strlen($name) > 64){
+            $invalidName = true;
         }
 
         $sql1 = "SELECT * FROM Users WHERE username = " . $username;
@@ -65,9 +71,9 @@
             $invalidEmail = true;
         }
 
-        if (!$invalidEmail && !$invalidUsername && !$invalidPassword && !$mismatchedPassword && !$takenEmail && !$takenUsername) {
+        if (!$invalidEmail && !$invalidUsername && !$invalidPassword && !$mismatchedPassword && !$takenEmail && !$takenUsername && !$invalidName) {
             //Good to go. Add them as a user.
-            $sql = "INSERT INTO Users (username, email, password, num_contributions) VALUES ('" . $username . "', '" . $email . "', '" . md5($password) . "', 0)";
+            $sql = "INSERT INTO Users (username, email, password, num_contributions, name) VALUES ('" . $username . "', '" . $email . "', '" . md5($password) . "', 0, '" . $name . "')";
 
             if ($result = $mysqli->query($sql)) {
                 //Successfully added the user to the database.
@@ -173,8 +179,14 @@
 					
 					<div class="pure-control-group">
                     <label for="name"><p>Full Name</p></label>
-                    <input id="Full Name" type="text" name="name" placeholder="Full Name">
+                    <input id="Full Name" type="text" name="name" placeholder="Full Name" <?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo "value='" . $_POST['chapter'] . "'"; } ?>>
                     </div>
+
+                    <?php
+                        if ($invalidName == true) {
+                            echo '<p class="error">Name must be between 1 and 64 characters long.</p>';
+                        }
+                    ?>
 					
                     <div class="pure-control-group">
                     <label for="chapter"><p>Chapter Name</p></label>
