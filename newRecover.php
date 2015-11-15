@@ -103,7 +103,13 @@
                     </select>
                     </div>
 
-            <button type="submit" class="pure-button pure-button-primary">Submit</button>
+             <style scoped>
+                        .button-xlarge{
+                            font-size: 125%;
+                        }
+            </style>
+
+                    <button type="submit" class="button-xlarge pure-button">Submit</button>
         
     </fieldset>
 </form>
