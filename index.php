@@ -130,7 +130,7 @@
 						Created by:<br>
 						Nathan Holt<br>
 						Maranda DeStefano<br>
-						Marissa Ballantyne<br>
+						Mars Ballantyne<br>
 						Sean Levorse
 					</p>
 				</div>
