@@ -32,9 +32,7 @@
         <link rel="stylesheet" href="css/default.css">
 		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
         <link rel="stylesheet" href="css/main.css">
-		<style type="text/css"> 
-
-			
+		<style type="text/css"> 	
 	
 			
 		</style>
@@ -49,24 +47,13 @@
 				<li class="pure-menu-item"><a href="newRecover.php" class="pure-menu-link">Add Recovery</a></li>
 				<li class="pure-menu-item"><a href="logout.php" class="pure-menu-link">Logout</a></li>
 			</ul>
-		</div>
-        
+		</div>    
 
-
-
-			
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
 
         <script src="js/main.js"></script>
-        
-        
-        <script>
 
-
-		
-		
-		
     <strong>
 
         <!-- CODE BELOW CALCULATES TOTAL POUNDS RECOVERED AND PRINTS IT OUT-->
