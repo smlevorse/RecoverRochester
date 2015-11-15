@@ -27,9 +27,11 @@
 			
 			$to = 'mxb9328@rit.edu';
 			$subject = 'Contact Form Message';
-			$messageToSend = $message;
-			$headers = 'From: $email' . "\r\n" .
-			'Reply-To: $email' . "\r\n" .
+			$messageToSend = "Name: " . $name . "\r\n";
+			$messageToSend .= "Reply to: " . $email . "\r\n";
+			$messageToSend .= $message;
+			$headers = 'From:' . $email . "\r\n" .
+			'Reply-To: ' .$email . "\r\n" .
 			'X-Mailer: PHP/' . phpversion();
 
 			mail($to, $subject, $messageToSend, $headers);	
