@@ -34,13 +34,31 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <table class="pure-table-horizontal">
+		<style>
+			table{
+				width: 900px
+			}
+		
+		</style>
+		
+		<style>
+		
+			p{
+				font-size: 22pt;
+				color: #54A636;
+			}
+		
+		</style>
+		
+		<div align=center>
+        <table class="pure-table pure-table-borded">
             <thead>
-                Food Recovery History
+                <p><b>Food Recovery History</b></p>
             </thead>
 
             <thead>
-                <tr>
+				
+                <tr style="background-color:#D8E3D8">
                     <th>Food Name</th>
                     <th>Date Recovered</th>
                     <th>Pounds</th>
@@ -48,9 +66,12 @@
                     <th>To</th>
                     <th>Delivered</th>
                     <th>Date Delivered</th>
-                </tr>
+                </tr>	
             </thead>
 
+			
+
+			
             <tbody>
                 <?php
                     $sql = "SELECT food_name, date_recovered, pounds_recovered, recovery_location, delivery_location, delivered, date_delivered FROM rec_and_dist";
@@ -63,16 +84,16 @@
                     //Loop through all the valid rows and create part of the table.
                     while ($row = $result->fetch_array()) {
                         echo "<tr>";
-                            echo "<td>" . $row['food_name'] . "</td>";
+                            echo "<strong><td style=color:#007308>" . $row['food_name'] . "</td></strong>";
                             echo "<td>" . $row['date_recovered'] . "</td>";
-                            echo "<td>" . $row['pounds_recovered'] . "</td>";
+                            echo "<strong><td style=color:#007308>" . $row['pounds_recovered'] . "</td></strong>";
                             echo "<td>" . $row['recovery_location'] . "</td>";
                             if ($row['delivered'] == 0) {
                                 echo "<td> N/A </td>";
                                 echo "<td> No </td>";
                                 echo "<td> N/A </td>";
                             } else {
-                                echo "<td> N/A </td>";
+                                echo "<td>". $row['delivery_location'] . "</td>";
                                 echo "<td> Yes </td>";
                                 echo "<td>" . $row['date_delivered'] . "</td>";
                             }
@@ -81,9 +102,7 @@
                 ?>
             </tbody>
         </table>
-
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-
+		</div>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
 

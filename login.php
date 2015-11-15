@@ -1,3 +1,48 @@
+<?php
+    session_start();
+    $invalidLogin = false;
+
+    $dbhost = "localhost";
+    $dbname = "seanmbed_fcn";
+    $dbusername = "seanmbed_admin";
+    $dbpass = "HackRPI2015";
+
+    $mysqli = new mysqli($dbhost, $dbusername, $dbpass, $dbname);
+    if ($mysqli->connect_errno) {
+        echo "Error: Could not connect to database.";
+        die();
+    }
+
+    //Check if they're already logged in.
+    if (isset($_SESSION['username']) && isset($_SESSION['loggedIn'])) {
+        header("location: dashboard.php");
+        exit();
+    }
+
+    //Check if the user has submitted the form.
+    if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    	//Let's check if it's a valid user/pass combination.
+
+    	$username = mysql_real_escape_string($_POST['username']);
+    	$password = md5($mysqli->real_escape_string($_POST['password']));
+
+    	$sql = "SELECT * FROM users WHERE username = '" . $username . "' AND password='" . $password . "'";
+
+    	if (!$result = $mysqli->query($sql)) {
+            //Error running query.
+            die("There was an error running the query: ". $mysqli->error);
+        }
+
+        if ($mysqli->affected_rows == 1) {
+        	//There's a match. Valid user/pass combination.
+        	header("location: dashboard.php");
+        	exit();
+        } else {
+        	$invalidLogin = true;
+        }
+    }
+?>
+
 <!doctype html>
 <html class="no-js" lang="">
     <head>
@@ -25,28 +70,40 @@
 				<style>
 					p{
 						font-size:22pt;
-						color:#54A636
+						color:#54A636;
+					}
+					#error {
+						color: #ff0000;
 					}
 				</style>
-        		<form class="pure-form pure-form-aligned">
+
+
+        		<form class="pure-form pure-form-aligned" method="POST" action="login.php">
+
 					<fieldset>
 						<legend><p><b>Login</b></p></legend>
 						
 						<div class="pure-control-group">
 						<label for="username"><p>Username</p></label>
-						<input id="username" type="text" placeholder="Username">
+						<input id="username" type="text" name="username" placeholder="Username" <?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo "value='" . $_POST['username'] . "'"; } ?> />
 						</div>
 						<div class="pure-control-group">
 						<label for="password"><p>Password</p></label>
-						<input id="password" type="password" placeholder="Password">
+						<input id="password" type="password" name="password" placeholder="Password" />
 						</div>
-						<p></p>
+
+						<?php 
+							if ($invalidLogin == true) {
+								echo '<p id="error">Invalid username and/or password. Please try again.</p>';
+							}
+						?>
+s
 						<style scoped>
 							.button-xlarge{
 								font-size: 135%;
 							}
 						</style>
-						<button type="submit" class="button-xlarge pure-button">Sign in</button>
+						<input type="submit" name="submit" class="button-xlarge pure-button" value="Submit"/>
 					</fieldset>
 				</form>
 			</div>
