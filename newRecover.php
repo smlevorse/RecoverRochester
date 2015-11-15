@@ -103,6 +103,14 @@
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
+    <div class="pure-menu pure-menu-horizontal" align="right">
+        <a href="#" class="pure-menu-heading pure-menu-link">Home</a>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="profile.php" class="pure-menu-link">Profile</a></li>
+            <li class="pure-menu-item"><a href="newRecover.php" class="pure-menu-link">Add Recovery</a></li>
+            <li class="pure-menu-item"><a href="logout.php" class="pure-menu-link">Logout</a></li>
+        </ul>
+    </div>
         <div align=center>
             <style>
                 p{
