@@ -98,6 +98,7 @@
 							die("There was an error running the query: ". $mysqli->error);
 						}
 
+
 						//Loop through all the valid rows and create part of the table.
 						while ($row = $result->fetch_array()) {
 							echo "<tr>";
@@ -122,6 +123,7 @@
 			</div>
 			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
 			<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
+
 
 			<script src="js/main.js"></script>
 			

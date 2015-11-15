@@ -5,6 +5,17 @@
         header("location:login.php");
         exit();
     }
+
+    $dbhost = "localhost";
+    $dbname = "seanmbed_fcn";
+    $dbusername = "seanmbed_admin";
+    $dbpass = "HackRPI2015";
+
+    $mysqli = new mysqli($dbhost, $dbusername, $dbpass, $dbname);
+    if ($mysqli->connect_errno) {
+        echo "Error: Could not connect to database.";
+        die();
+    }
 ?>
 
 <!doctype html>
@@ -133,9 +144,23 @@
 		<h1>Database Data</h1>
 		<div id="myChart"></div>
 		
-		</div>
 		
-		<footer>
+		
+    <strong>
+
+        <!-- CODE BELOW CALCULATES TOTAL POUNDS RECOVERED AND PRINTS IT OUT-->
+        <?php
+            $sql = "SELECT SUM(pounds_recovered) AS value_sum FROM rec_and_dist";
+            $result = $mysqli->query($sql);
+            $resultArray = $result->fetch_array();
+            echo "Total pounds recovered: " . $resultArray['value_sum'];
+        ?>
+        <!-- -->
+
+    </strong>
+</div>
+
+    <footer>
             <div class="pure-g">
                 <div class="pure-u-8-24">
                     <img src='http://www.hackrpi.com/assets/logo.png'>
