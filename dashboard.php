@@ -65,6 +65,8 @@
 		$dbpass = "HackRPI2015";
 
 		$mysqli = new mysqli($dbhost, $dbusername, $dbpass, $dbname);
+
+        ?>
 			
     <strong>
 
