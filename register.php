@@ -18,33 +18,43 @@
         <div align=center>
             <style>
                 p{
-                    font-size:14pt;
+                    font-size:16pt;
                     color:#54A636;
+                    font-family:"century gothic"
                 }
 
             </style>
 
             <form class="pure-form pure-form-aligned">
                 <fieldset>
-                    <legend><p>Register</p></legend>
+                    <legend><p><b>Register</b></p></legend>
 
-                    <label for="username">Username</label>
+                    <div class="pure-control-group">
+                    <label for="username"><p>Username</p></label>
                     <input id="username" type="text" placeholder="Username">
+                    </div>
 
-                    <label for="email">Email</label>
+                    <div class="pure-control-group">
+                    <label for="email"><p>Email</p></label>
                     <input id="email" type="email" placeholder="Email">
+                    </div>
 
-                    <label for="password">Password</label>
+
+                    <div class="pure-control-group">
+                    <label for="password"><p>Password</p></label>
                     <input id="password" type="password" placeholder="Password">
+                    </div>
 
-                    <label for="chapter">Chapter Name</label>
-                    <input id="Chapter Name" type="text" placeholder="Password">
+                    <div class="pure-control-group">
+                    <label for="chapter"><p>Chapter Name</p></label>
+                    <input id="Chapter Name" type="text" placeholder="Chapter Name">
+                    </div>
 
                     <label for="remember" class="pure-checkbox">
                     <input id="remember" type="checkbox"> Remember me
                     </label>
 
-                    <button type="submit" class="pure-button pure-button-primary">Register</button>
+                    <button type="submit" class="button-xlarge pure-button">Register</button>
                 </fieldset>
             </form>
         </div>
