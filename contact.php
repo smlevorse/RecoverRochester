@@ -76,10 +76,19 @@
 
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/default.css">
 
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
+    <div class="pure-menu pure-menu-horizontal" align="right">
+        <a href="#" class="pure-menu-heading pure-menu-link">Home</a>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="profile.php" class="pure-menu-link">Profile</a></li>
+            <li class="pure-menu-item"><a href="newRecover.php" class="pure-menu-link">Add Recovery</a></li>
+            <li class="pure-menu-item"><a href="logout.php" class="pure-menu-link">Logout</a></li>
+        </ul>
+    </div>
         <div align=center>
             <style>
                 p{
@@ -165,4 +174,25 @@
         </script>
         -->
     </body>
+    <footer>
+            <div class="pure-g">
+                <div class="pure-u-8-24">
+                    <img src='http://www.hackrpi.com/assets/logo.png'>
+                </div>
+                <div class="pure-u-5-24">
+                    <p>
+                        Created by:<br>
+                        Nathan Holt<br>
+                        Maranda DeStefano<br>
+                        Marissa Ballantyne<br>
+                        Sean Levorse
+                    </p>
+                </div>
+                <div class="pure-u-5-24">
+                    <a href="about.php">About Us</a>
+                </div>
+                <div class="pure-u-5-24">
+                    <a href="contact.php">Contact Us</a>
+                </div>
+        </footer>
 </html>

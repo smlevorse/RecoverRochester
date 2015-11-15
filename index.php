@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 <?php 
 	session_start();
 	
 	?>
 
 <!doctype html>
+=======
+<!doctype html>
+>>>>>>> ab967d89fd1c001639382d2a67d414f72b852d2f
 <html class="no-js" lang="">
     <head>
         <meta charset="utf-8">
@@ -54,6 +58,11 @@
 	
 				if (!isset($_SESSION['username'])){?>
 					<h2>
+						<style>
+							p{
+								color:#BED8B8;
+							}
+						</style>
 						<div class="pure-menu pure-menu-horizontal">
 						<ul class="pure-menu-list">
 							<li class="pure-menu-item"><a href="login.php" class="pure-menu-link"><p>Login</p></a></li>
@@ -121,10 +130,10 @@
 				
 		<footer>
 			<div class="pure-g">
-				<div class="pure-u-1-3">
+				<div class="pure-u-8-24">
 					<img src='http://www.hackrpi.com/assets/logo.png'>
 				</div>
-				<div class="pure-u-1-3">
+				<div class="pure-u-5-24">
 					<p>
 						Created by:<br>
 						Nathan Holt<br>
@@ -133,7 +142,12 @@
 						Sean Levorse
 					</p>
 				</div>
-			</div>
+				<div class="pure-u-5-24">
+					<a href="about.php">About Us</a>
+				</div>
+				<div class="pure-u-5-24">
+					<a href="contact.php">Contact Us</a>
+				</div>
 		</footer>
         
 

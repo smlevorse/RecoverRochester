@@ -91,6 +91,10 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>New Entry |  Food Circulation Network</title>
+
+
+        <script type="text/javascript" src="http://cdn.zingchart.com/zingchart.min.js"></script>
+
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -99,6 +103,7 @@
 
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/default.css">
 
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
@@ -258,4 +263,25 @@
         </script>
         -->
     </body>
+    <footer>
+            <div class="pure-g">
+                <div class="pure-u-8-24">
+                    <img src='http://www.hackrpi.com/assets/logo.png'>
+                </div>
+                <div class="pure-u-5-24">
+                    <p>
+                        Created by:<br>
+                        Nathan Holt<br>
+                        Maranda DeStefano<br>
+                        Marissa Ballantyne<br>
+                        Sean Levorse
+                    </p>
+                </div>
+                <div class="pure-u-5-24">
+                    <a href="about.php">About Us</a>
+                </div>
+                <div class="pure-u-5-24">
+                    <a href="contact.php">Contact Us</a>
+                </div>
+        </footer>
 </html>
