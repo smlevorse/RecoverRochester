@@ -39,6 +39,9 @@
 				<img id="logo" src="img/leaf.svg" onerror="this.src='img/leaf.png'"></img>
 				Food Circulation Network
 			</h1>
+			<h3>
+			[description]
+			</h3>
 			
 			<?php
 			
@@ -64,6 +67,8 @@
 						<ul class="pure-menu-list">
 							<li class="pure-menu-item"><a href="login.php" class="pure-menu-link"><p>Login</p></a></li>
 							<li class="pure-menu-item"><a href="register.php" class="pure-menu-link"><p>Register</p></a></li>
+							<li class="pure-menu-item"><a href="about.php" class="pure-menu-link"><p>About</p></a></li>
+							<li class="pure-menu-item"><a href="recoveries.php" class="pure-menu-link"><p>View Recoveries</p></a></li>
 						</ul>
 						</div>
 					</h2>
@@ -80,6 +85,7 @@
 						<ul class="pure-menu-list">
 							<li class="pure-menu-item"><a href="profile.php" class="pure-menu-link"><p>Profile</p></a></li>
 							<li class="pure-menu-item"><a href="newRecover.php" class="pure-menu-link"><p>Add Recovery</p></a></li>
+							<li class="pure-menu-item"><a href="recoveries.php" class="pure-menu-link"><p>View Recoveries</p></a></li>
 							<li class="pure-menu-item"><a href="logout.php" class="pure-menu-link"><p>Logout</p></a></li>
 						</ul>
 						</div>
