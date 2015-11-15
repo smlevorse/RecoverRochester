@@ -22,7 +22,7 @@
     //Check if the user has submitted the form.
     if ($_SERVER['REQUEST_METHOD'] == "POST") {
     	//Let's check if it's a valid user/pass combination.
-echo "form sent";
+
     	$username = $mysqli->real_escape_string($_POST['username']);
     	$password = md5($mysqli->real_escape_string($_POST['password']));
 
