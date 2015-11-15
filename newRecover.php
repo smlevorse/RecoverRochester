@@ -1,3 +1,37 @@
+<?php
+    session_start(); //allows you to access cookies which is helpful since they are logged in to get their username
+
+    if (!isset($_SESSION["username"])) { //global array, accessing by index
+        header("location:login.php");
+        exit();
+    } 
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST')  { //if the form has been submitted
+        $food = $_POST['food'];
+        $category = $_POST['category']
+        $weight = $_POST['weight'];
+
+        $date_r = $_POST['date_1'];
+        $date_d = $_POST['date_2'];
+
+        $location_r = $_POST['location_1'];
+        $location_d = $_POST['location_2'];
+
+
+    }
+
+    
+
+
+
+
+?>
+
+
+
+
+
+
 <!doctype html>
 <html class="no-js" lang="">
     <head>
@@ -37,19 +71,19 @@
                     <div class="pure-control-group">
                         <label for="category"><p>Category</p></label>
                             <select id="category" name="category">
-                                <option>Meat</option>
-                                <option>Grains</option>
-                                <option>Vegetables</option>
-                                <option>Desserts</option>
-                                <option>Fruit</option>
-                                <option>Other</option>
+                                <option value="Meat">Meat</option>
+                                <option value="Grains">Grains</option>
+                                <option value="Vegetables">Vegetables</option>
+                                <option value="Desserts">Desserts</option>
+                                <option value="Fruit">Fruit</option>
+                                <option value="Other">Other</option>
                             </select>
                     </div>
 
 
                     <div class="pure-control-group">
                         <label for="weight"><p>Weight</p></label>
-                        <input id="weight" type="float" placeholder="# Pounds Recovered">
+                        <input id="weight" type="float" name = "weight"  placeholder="# Pounds Recovered">
                     </div>
 
 
@@ -94,12 +128,12 @@
                     <div class="pure-control-group">
                     <label for="chapter"><p>Chapter</p></label>
                     <select id="chapter">
-                        <option>Recover Rochester</option>
-                        <option>Clarkson Carriers</option>
-                        <option>University of Rochester</option>
-                        <option>Binghamton</option>
-                        <option>Drexel</option>
-                        <option>Other</option>
+                        <option value="Recover Rochester">Recover Rochester</option>
+                        <option value="Clarkson Carriers">Clarkson Carriers</option>
+                        <option value="University of Rochester">University of Rochester</option>
+                        <option value="Binghamton">Binghamton</option>
+                        <option value="Drexel">Drexel</option>
+                        <option value="Other">Other</option>
                     </select>
                     </div>
 
