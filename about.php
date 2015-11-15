@@ -27,6 +27,7 @@
 		
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="js/chartist.js"></script>
     </head>
     <body>
 	<div class="body">
@@ -35,12 +36,12 @@
         if ((isset($_SESSION['username']) && isset($_SESSION['loggedIn']))) { 
     ?>
             <div class="pure-menu pure-menu-horizontal" align="right">
-            <ul class="pure-menu-list">
-            	<li class="pure-menu-item"><a href="dashboard.php" class="pure-menu-link">Home</a></li>
-                <li class="pure-menu-item"><a href="profile.php" class="pure-menu-link">Profile</a></li>
-                <li class="pure-menu-item"><a href="newRecover.php" class="pure-menu-link">Add Recovery</a></li>
-                <li class="pure-menu-item"><a href="logout.php" class="pure-menu-link">Logout</a></li>
-            </ul>
+	            <ul class="pure-menu-list">
+	            	<li class="pure-menu-item"><a href="dashboard.php" class="pure-menu-link">Home</a></li>
+	                <li class="pure-menu-item"><a href="profile.php" class="pure-menu-link">Profile</a></li>
+	                <li class="pure-menu-item"><a href="newRecover.php" class="pure-menu-link">Add Recovery</a></li>
+	                <li class="pure-menu-item"><a href="logout.php" class="pure-menu-link">Logout</a></li>
+	            </ul>
             </div>
     <?php  
         }
