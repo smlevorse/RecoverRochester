@@ -40,10 +40,42 @@
         }
 
         $sql1 = "SELECT * FROM Users WHERE username = " . $username;
-        $sql2 = "SELECT * FROM Users WHERE password = " . md5($password);
+        $sql2 = "SELECT * FROM Users WHERE email = " . $email;
 
         $result1 = $mysqli->query($sql1);
-        if ($result1->affected_rows == 1)
+        if ($mysqli->affected_rows == 1) {
+            //Username is taken.
+            $takenUsername = true;
+        }
+
+        $result2 = $mysqli->query($sql2);
+        if ($mysqli->affected_rows == 1) {
+            //Username is taken.
+            $takenEmail = true;
+        }
+
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+          //Not a valid email address.
+            $invalidEmail = true;
+        }
+
+        if (!$invalidEmail && !$invalidUsername && !$invalidPassword && !$takenEmail && !$takenUsername) {
+            //Good to go. Add them as a user.
+            $sql = "INSERT INTO Users (username, email, password, num_contributions) VALUES ('" . $username . "', '" . $email . "', '" . md5($password) . "', 0)";
+
+            if ($result = $mysqli->query($sql)) {
+                //Successfully added the user to the database.
+
+                //Set the session to log them in.
+                $_SESSION['username'] = $username;
+                $_SESSION['loggedIn'] = true;
+
+                header("welcome.php");
+                exit();
+            } else {
+                die("Failed to add user to the database.");
+            }
+        }
     }
 ?>
 
