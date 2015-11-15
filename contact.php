@@ -33,7 +33,9 @@
 
 			mail($to, $subject, $messageToSend);	
 			
-			echo "Message Sent";
+			header("location:messagesuccess.php");
+            exit();
+			
 		}
     }
 
