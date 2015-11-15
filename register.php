@@ -50,10 +50,6 @@
                     <input id="Chapter Name" type="text" name="chapter" placeholder="Chapter Name">
                     </div>
 
-                    <label for="remember" class="pure-checkbox">
-                    <input id="remember" type="checkbox"> Remember me
-                    </label>
-
                     <style scoped>
                         .button-xlarge{
                             font-size: 125%;

@@ -28,7 +28,7 @@
 						color:#54A636;
 					}
 				</style>
-        		<form class="pure-form pure-form-aligned">
+        		<form class="pure-form pure-form-aligned", method="POST", action="login.php">
 					<fieldset>
 						<legend><p><b>Login</b></p></legend>
 						
@@ -40,6 +40,8 @@
 						<label for="password"><p>Password</p></label>
 						<input id="password" type="password" placeholder="Password">
 						</div>
+						
+						
 						<p></p>
 						<style scoped>
 							.button-xlarge{
