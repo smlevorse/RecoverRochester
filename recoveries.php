@@ -50,7 +50,7 @@
 			
 				 <div class="pure-menu pure-menu-horizontal" align="right">
 						<ul class="pure-menu-list">
-							<li class="pure-menu-item"><a href="dashboard.php" class="pure-menu-link">Home</a></li>
+							<li class="pure-menu-item"><a href="index.php" class="pure-menu-link">Home</a></li>
 							<li class="pure-menu-item"><a href="login.php" class="pure-menu-link">Login</a></li>
 							<li class="pure-menu-item"><a href="register.php" class="pure-menu-link">Register</a></li>
 						</ul>
