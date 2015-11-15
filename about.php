@@ -96,21 +96,25 @@
 			<section class="content">
 				<div class="pure-g">
 					<div class="pure-u-3-24"></div>
-					<div class="pure-u-8-24">
-						<img src="img/grapes.jpeg" alt="grapes" class="img-responsive">
-					</div>
 					<div class="pure-u-10-24">
 						<p>
 							Developed for HackRPI, Food Circulation Network is a tool for chapters of the Food Recovery Network like Recover Rochester to track and
 							analyze the food that they have collected and distributed. This tool helps the Data Management Committee as well as FRN Rrepresentatives keep a record of food distribution. 
 						</p>
 					</div>
+					<div class="pure-u-8-24">
+						<img src="img/grapes.jpeg" alt="grapes" class="img-responsive">
+					</div>
+					
 				</div>
 			</section>
 			
 			<section class="content">
 				<div class="pure-g">
 					<div class="pure-u-3-24"></div>
+					<div class="pure-u-8-24">
+						<img src="https://pbs.twimg.com/media/CC4Fx8tW8AESSTB.jpg" alt="Recover Rochester" class="img-responsive">
+					</div>
 					<div class="pure-u-10-24">
 						<h2>Our Mission</h2>
 						<p>
@@ -119,9 +123,6 @@
 							looking to Recover Rochester for guidance, we hope to make data collection more efficient for all chapters. Providing visual representation will 
 							allow students and community members to easily view the impact of their FRN chapter, thus raising awareness about food insecurity and waste.
 						</p>
-					</div>
-					<div class="pure-u-8-24">
-						<img src="https://pbs.twimg.com/media/CC4Fx8tW8AESSTB.jpg" alt="Recover Rochester" class="img-responsive">
 					</div>
 				</div>
 			</section>
