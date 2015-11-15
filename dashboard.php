@@ -93,12 +93,13 @@
 
 	</div>
     </strong>
+	<br></br>
 	<div align=center>
 	
 	<strong>
 	Percentages of Food Categories
     <div class="ct-chart" id="chart1" style="width: 300px;height: 300px;"></div>
-	
+	<br></br>
 	Food Recoveries per Day
     <div class="ct-chart" id="chart2" style="width: 700px;height: 300px;"></div>
 	</strong>
