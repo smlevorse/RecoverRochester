@@ -124,7 +124,7 @@
                     while ($row = $result->fetch_array()) {
                         echo "<tr>";
                             echo "<strong><td style=color:#007308>" . $row['food_name'] . "</td></strong>";
-                            echo "<td>" . $row['date_recovered'] . "</td>";
+                            echo "<td>" . date("Y-m-d", $row['date_recovered']) . "</td>";
                             echo "<strong><td style=color:#007308>" . $row['pounds_recovered'] . "</td></strong>";
                             echo "<td>" . $row['recovery_location'] . "</td>";
                             if ($row['delivered'] == 0) {
@@ -134,7 +134,7 @@
                             } else {
                                 echo "<td>". $row['delivery_location'] . "</td>";
                                 echo "<td> Yes </td>";
-                                echo "<td>" . $row['date_delivered'] . "</td>";
+                                echo "<td>" . date("Y-m-d", $row['date_delivered']) . "</td>";
                             }
                         echo "</tr>";
                     }
