@@ -1,3 +1,8 @@
+<?php 
+	session_start();
+	
+	?>
+
 <!doctype html>
 <html class="no-js" lang="">
     <head>
@@ -35,7 +40,6 @@
 			</h1>
 			
 			<?php
-				session_start();
 			
 				$dbhost = "localhost";
 				$dbname = "seanmbed_fcn";
