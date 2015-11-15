@@ -22,7 +22,7 @@
     //Check if the user has submitted the form.
     if ($_SERVER['REQUEST_METHOD'] == "POST") {
     	//Let's check if it's a valid user/pass combination.
-
+echo "form sent";
     	$username = $mysqli->real_escape_string($_POST['username']);
     	$password = md5($mysqli->real_escape_string($_POST['password']));
 
@@ -35,6 +35,9 @@
 
         if ($mysqli->affected_rows == 1) {
         	//There's a match. Valid user/pass combination.
+        	$_SESSION['username'] = $username;
+        	$_SESSION['loggedIn'] = true;
+
         	header("location: dashboard.php");
         	exit();
         } else {
