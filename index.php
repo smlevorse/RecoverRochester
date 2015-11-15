@@ -35,21 +35,6 @@
 		
 		
 		<header>
-			<style>
-				h1 {
-					margin-bottom:0;
-				}
-				
-				h3 {
-					margin-bottom:5em;
-					margin-top: -1em;
-					
-				}
-				
-				body {
-					background-color:#4A9130;
-				}
-			</style>
 			<h1>
 				<img id="logo" src="img/leaf.svg" onerror="this.src='img/leaf.png'"></img>
 				Food Circulation Network
@@ -100,6 +85,7 @@
 						<ul class="pure-menu-list">
 							<li class="pure-menu-item"><a href="profile.php" class="pure-menu-link"><p>Profile</p></a></li>
 							<li class="pure-menu-item"><a href="newRecover.php" class="pure-menu-link"><p>Add Recovery</p></a></li>
+							<li class="pure-menu-item"><a href="recoveries.php" class="pure-menu-link"><p>View Recoveries</p></a></li>
 							<li class="pure-menu-item"><a href="logout.php" class="pure-menu-link"><p>Logout</p></a></li>
 						</ul>
 						</div>
