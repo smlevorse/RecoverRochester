@@ -1,3 +1,18 @@
+<?php
+    session_start();
+
+    $dbhost = "localhost";
+    $dbname = "seanmbed_fcn";
+    $dbusername = "seanmbed_admin";
+    $dbpass = "HackRPI2015";
+
+    $mysqli = new mysqli($dbhost, $dbusername, $dbpass, $dbname);
+    if ($mysqli->connect_errno) {
+        echo "Error: Could not connect to database.";
+        die();
+    }
+?>
+
 <!doctype html>
 <html class="no-js" lang="">
     <head>
@@ -15,23 +30,25 @@
     </head>
     <body>
 		
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+    <?php 
+        if ((isset($_SESSION['username']) && isset($_SESSION['loggedIn']))) { 
+    ?>
+            <div class="pure-menu pure-menu-horizontal" align="right">
+            <a href="#" class="pure-menu-heading pure-menu-link">Home</a>
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="profile.php" class="pure-menu-link">Profile</a></li>
+                <li class="pure-menu-item"><a href="newRecover.php" class="pure-menu-link">Add Recovery</a></li>
+                <li class="pure-menu-item"><a href="logout.php" class="pure-menu-link">Logout</a></li>
+            </ul>
+            </div>
+    <?php  
+        }
+    ?>
 		
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
 
         <script src="js/main.js"></script>
-		
-		<div class="pure-menu pure-menu-horizontal" align="right">
-			<a href="#" class="pure-menu-heading pure-menu-link">Home</a>
-			<ul class="pure-menu-list">
-				<li class="pure-menu-item"><a href="profile.php" class="pure-menu-link">Profile</a></li>
-				<li class="pure-menu-item"><a href="newRecover.php" class="pure-menu-link">Add Recovery</a></li>
-				<li class="pure-menu-item"><a href="logout.php" class="pure-menu-link">Logout</a></li>
-			</ul>
-		</div>
         
 		<header>
 			<h1>
@@ -48,7 +65,7 @@
 						Every year, 1.3 billion tons of food is wasted around the world. In America alone, about 35 millions tons of food is thrown away each year.
 						1 in 6 Americans struggle with food insecurity. Every 1 in 4 children suffers from hunger. With 15% of Americans living in poverty, many 
 						people cannot afford to feed their families. Food Recovery Network is a nationwide effort to combat this problem, delivering excess 
-						food from college campuses to local shelters and soup kitchens.
+						food from college campuses to local shelters and soup kitchens.With over 150 chapters spread across 39 states, the organization is quite large. Recover Rochester, founded in 2012 and run by RIT students, is one of FRN’s oldest and most effective chapters. 
 					</p>
 				</div>
 				<div class="pure-u-8-24">
@@ -68,22 +85,6 @@
 						In the  Rochester area, there are roughly 30,000 people struggling with food insecurity. With colleges and restaurants in the area throwing
 						out roughly 1 ton of food a day, Recover Rochester works to recover that food and reallocate it to those in need.
 					</p>
-				</div>
-			</div>
-		</section>
-		
-		<section class="content">
-			<div class="pure-g">
-				<div class="pure-u-3-24"></div>
-				<div class="pure-u-10-24">
-					<p>
-						In the United States, food insecurity affects 1 in 6 people, or 50 million Americans. The Food Recovery Network is the largest 
-						student movement against food waste and hunger in America. With over 150 chapters spread across 39 states, the organization is quite large.
-						Recover Rochester, founded and run by RIT students, is one of FRN’s largest and most effective chapters. 
-					</p>
-				</div>
-				<div class="pure-u-8-24">
-					<img src="img/hamburger.jpg" alt="woman holding small hamburger" class="img-responsive">
 				</div>
 			</div>
 		</section>
