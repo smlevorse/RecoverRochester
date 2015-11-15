@@ -30,47 +30,38 @@
 			<h1>Food Circulation Network</h1>
 		</header>
 		
-		<div class="pure-menu pure-menu-horizontal">
-			<ul class="pure-menu-list">
-				<li class="pure-menu-item"><a href="login.php" class="pure-menu-link">Login</a></li>
-				<li class="pure-menu-item"><a href="register.php" class="pure-menu-link">Register</a></li>
-			</ul>
-		</div>
-		
-		<div class="parallax">
-			<div class="parallax_group">
-				<div class="parallax_layer parallax_layer_base">
-					
-					<div class="bloat"></div>
-				
-					<div class="content">
-						<p>
-							In the United States, food insecurity affects 1 in 6 people, or 50 million Americans. The Food Recovery Network is the largest 
-							student movement against food waste and hunger in America. With over 150 chapters spread across 39 states, the organization is quite large.
-							Recover Rochester, founded and run by RIT students, is one of FRN’s largest and most effective chapters. 
-						</p>
-					</div>
-				
-					<div class="bloat"></div>
-				
-					<div class="content">
-						<p>
-							Developed for HackRPI, Food Circulation Network is a tool for chapters of the Food Recover Network like Recover Rochester to track and 
-							analyze the food that they have collected and distributed. This tool helps local admins keep a record of distribution locations and how 
-							much of each food category is at each location. 
-						</p>
-					</div>
+		<section class="content">
+			<div class="pure-g">
+				<div class="pure-u-3-24"></div>
+				<div class="pure-u-10-24">
+					<p>
+						In the United States, food insecurity affects 1 in 6 people, or 50 million Americans. The Food Recovery Network is the largest 
+						student movement against food waste and hunger in America. With over 150 chapters spread across 39 states, the organization is quite large.
+						Recover Rochester, founded and run by RIT students, is one of FRN’s largest and most effective chapters. 
+					</p>
 				</div>
-				
-				<div class="parallax_layer parallax_layer_back">
-					<div class="bloat">
-					<img class="pure-img" src="img/paralax_back.jpeg">
+				<div class="pure-u-8-24">
+					<img src="img/hamburger.jpg" alt="woman holding small hamburger" class="img-responsive">
 				</div>
 			</div>
-			
-			
-		</div>
-		
+		</section>
+				
+		<section class="content">
+			<div class="pure-g">
+				<div class="pure-u-3-24"></div>
+				<div class="pure-u-8-24">
+					<img src="img/grapes.jpeg" alt="grapes" class="img-responsive">
+				</div>
+				<div class="pure-u-10-24">
+					<p>
+						Developed for HackRPI, Food Circulation Network is a tool for chapters of the Food Recover Network like Recover Rochester to track and 
+						analyze the food that they have collected and distributed. This tool helps local admins keep a record of distribution locations and how 
+						much of each food category is at each location. 
+					</p>
+				</div>
+			</div>
+		</section>
+				
 		<footer>
 			<div class="pure-g">
 				<div class="pure-u-1-3">

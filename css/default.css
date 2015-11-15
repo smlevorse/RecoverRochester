@@ -1,20 +1,33 @@
 .content p{
 	font-size:24pt;
 	color:#FFF;
-	max-width:40%;
+	padding: 1em;
 }
 
 .content {
 	width:100%;
 	min-height:5em;
 	margin:0;
-	padding: 2em 30% 2em 30%;
+	padding: 2em 0 2em 0;
 	background-color:rgba(21, 112, 7, .7);
+	margin:7em 0 7em 0;
 	
 }
 
+.content img {
+	position: relative;
+	top: 50%;
+	transform: translateY(2.5%);
+	max-width:100%;
+	max-height:100%;
+	/*
+	display: inline-block;
+	vertical-align:middle;
+	*/
+}
+
 .bloat{
-	margin-top:20em;
+	margin-top:15em;
 }
 
 .parallax {
@@ -85,13 +98,4 @@ footer {
 	color:#fff;
 	padding:1em;
 	
-}
-
-.pure-menu {
-	background-color:#157007;
-	color:#fff;
-}
-
-.pure-menu-link:hover, .pure-menu-item:hover {
-	background-color:#2A531B;
 }
