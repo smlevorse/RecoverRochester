@@ -27,7 +27,10 @@
         <script src="js/main.js"></script>
         
 		<header>
-			<h1>Food Circulation Network</h1>
+			<h1>
+				<img id="logo" src="img/leaf.svg" onerror="this.src='img/leaf.png'"></img>
+				Food Circulation Network
+			</h1>
 		</header>
 		
 		<section class="content">
@@ -71,7 +74,7 @@
 					<p>
 						Created by:<br>
 						Nathan Holt<br>
-						Maranda DeSetafano<br>
+						Maranda DeStefano<br>
 						Marissa Ballantyne<br>
 						Sean Levorse
 					</p>
