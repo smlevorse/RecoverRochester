@@ -82,14 +82,33 @@
     </head>
     <body>
 		<div class="body">
-			<div class="pure-menu pure-menu-horizontal" align="right">
-				<a href="#" class="pure-menu-heading pure-menu-link">Home</a>
-				<ul class="pure-menu-list">
-					<li class="pure-menu-item"><a href="profile.php" class="pure-menu-link">Profile</a></li>
-					<li class="pure-menu-item"><a href="newRecover.php" class="pure-menu-link">Add Recovery</a></li>
-					<li class="pure-menu-item"><a href="logout.php" class="pure-menu-link">Logout</a></li>
-				</ul>
-			</div>
+			<?php 
+                if ((isset($_SESSION['username']) && isset($_SESSION['loggedIn']))) { 
+            ?>
+                 <div class="pure-menu pure-menu-horizontal" align="right">
+                    <ul class="pure-menu-list">
+                        <li class="pure-menu-item"><a href="dashboard.php" class="pure-menu-link">Home</a></li>
+                        <li class="pure-menu-item"><a href="profile.php" class="pure-menu-link">Profile</a></li>
+                        <li class="pure-menu-item"><a href="newRecover.php" class="pure-menu-link">Add Recovery</a></li>
+                        <li class="pure-menu-item"><a href="logout.php" class="pure-menu-link">Logout</a></li>
+                    </ul>
+                </div>
+            <?php  
+                }
+                else{
+            ?>      
+            
+                 <div class="pure-menu pure-menu-horizontal" align="right">
+                        <ul class="pure-menu-list">
+                            <li class="pure-menu-item"><a href="index.php" class="pure-menu-link">Home</a></li>
+                            <li class="pure-menu-item"><a href="login.php" class="pure-menu-link">Login</a></li>
+                            <li class="pure-menu-item"><a href="register.php" class="pure-menu-link">Register</a></li>
+                        </ul>
+                    </div>
+            
+            <?php   
+                }
+            ?>
 				<div align=center>
 					<style>
 						h1{
