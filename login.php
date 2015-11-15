@@ -51,7 +51,7 @@
 				<style>
 					p{
 						font-size:22pt;
-						color:#54A636
+						color:#54A636;
 					}
 				</style>
         		<form class="pure-form pure-form-aligned" method="POST" action="login.php">
