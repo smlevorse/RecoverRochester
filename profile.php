@@ -147,6 +147,7 @@
 
 			<script src="js/main.js"></script>
         </div>
+    </body>
         
         <footer>
             <div class="pure-g">
@@ -170,5 +171,5 @@
                 </div>
             </div>
         </footer>
-    </body>
+    
 </html>

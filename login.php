@@ -68,16 +68,24 @@
     </head>
     <body>
 		<div class="body">
-			<!--[if lt IE 8]>
-				<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-			<![endif]-->
+			<div class="pure-menu pure-menu-horizontal" align="right">
+				<ul class="pure-menu-list">
+                	<li class="pure-menu-item"><a href="index.php" class="pure-menu-link">Back</a></li>
+                </ul>
+            </div>
+
 				<div align=center>
 					<style>
-						p{
-							class: pure-control-group;
-							font-size:22pt;
-							color:#54A636;
-						}
+						h1{
+                   			font-size:22pt;
+                    		color:#54A636;
+                    		font-family:"century gothic"
+                		}
+                		h2{
+                    		font-size:14pt;
+                    		color:#54A636;
+                    	font-family:"century gothic"
+                		}
 						#error {
 							class: pure-control-group;
 							font-size:14pt;
@@ -89,14 +97,14 @@
 					<form class="pure-form pure-form-aligned" method="POST" action="login.php">
 
 						<fieldset>
-							<legend><p><b>Login</b></p></legend>
+							<legend><h1><b>Login</b></h1></legend>
 							
 							<div class="pure-control-group">
-							<label for="username"><p>Username</p></label>
+							<label for="username"><h2>Username</h2></label>
 							<input id="username" type="text" name="username" placeholder="Username" <?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo "value='" . $_POST['username'] . "'"; } ?> />
 							</div>
 							<div class="pure-control-group">
-							<label for="password"><p>Password</p></label>
+							<label for="password"><h2>Password</h2></label>
 							<input id="password" type="password" name="password" placeholder="Password" />
 							</div>
 							

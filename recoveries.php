@@ -73,17 +73,23 @@
 			
 			<style>
 			
-				p{
-					font-size: 22pt;
-					color: #54A636;
-				}
+				h1{
+                    font-size:22pt;
+                    color:#54A636;
+                    font-family:"century gothic"
+                }
+                h2{
+                    font-size:14pt;
+                    color:#54A636;
+                    font-family:"century gothic"
+                }
 			
 			</style>
 			
 			<div align=center>
 			<table class="pure-table pure-table-borded">
 				<thead>
-					<p><b>Food Recovery History</b></p>
+					<p><b><h1>Food Recovery History</h1></b></p>
 				</thead>
 
 				<thead>
@@ -154,6 +160,7 @@
 			</script>
 			-->
 		</div>
+    
 		
 		<footer>
             <div class="pure-g">
@@ -178,5 +185,4 @@
             </div>
         </footer>
     </body>
-
 </html>
