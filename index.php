@@ -1,4 +1,4 @@
-<!doctype html>
+<!doctype html>
 <html class="no-js" lang="">
     <head>
         <meta charset="utf-8">
@@ -67,10 +67,10 @@
 				
 		<footer>
 			<div class="pure-g">
-				<div class="pure-u-1-3">
+				<div class="pure-u-8-24">
 					<img src='http://www.hackrpi.com/assets/logo.png'>
 				</div>
-				<div class="pure-u-1-3">
+				<div class="pure-u-5-24">
 					<p>
 						Created by:<br>
 						Nathan Holt<br>
@@ -79,7 +79,12 @@
 						Sean Levorse
 					</p>
 				</div>
-			</div>
+				<div class="pure-u-5-24">
+					<a href="about.php">About Us</a>
+				</div>
+				<div class="pure-u-5-24">
+					<a href="contact.php">Contact Us</a>
+				</div>
 		</footer>
         
 
