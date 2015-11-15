@@ -26,7 +26,7 @@
     	$username = $mysqli->real_escape_string($_POST['username']);
     	$password = md5($mysqli->real_escape_string($_POST['password']));
 
-    	$sql = "SELECT * FROM users WHERE username = '" . $username . "' AND password='" . $password . "'";
+    	$sql = "SELECT * FROM Users WHERE username = '" . $username . "' AND password='" . $password . "'";
 
     	if (!$result = $mysqli->query($sql)) {
             //Error running query.

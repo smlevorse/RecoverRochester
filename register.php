@@ -1,3 +1,52 @@
+<?php
+    session_start();
+    $invalidUsername = false;
+    $takenUsername = false;
+    $invalidPassword = false;
+    $invalidEmail = false;
+    $takenEmail = false;
+
+    $dbhost = "localhost";
+    $dbname = "seanmbed_fcn";
+    $dbusername = "seanmbed_admin";
+    $dbpass = "HackRPI2015";
+
+    $mysqli = new mysqli($dbhost, $dbusername, $dbpass, $dbname);
+    if ($mysqli->connect_errno) {
+        echo "Error: Could not connect to database.";
+        die();
+    }
+
+    //Check if they're already logged in.
+    if (isset($_SESSION['username']) && isset($_SESSION['loggedIn'])) {
+        header("location: dashboard.php");
+        exit();
+    }
+
+    //Check if the form has been submitted.
+    if ($_SERVER['REQUEST_METHOD'] == "POST") {
+        //Save the variables from the form:
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $email = $_POST['email'];
+        $chapter = $_POST['chapter'];
+
+        //Check if username and password are the right length.
+        if (strlen($username) < 5 || strlen($username) > 32) {
+            $invalidUsername = true;
+        }
+        if (strlen($password) < 5 || strlen($password) > 32) {
+            $invalidPassword = true;
+        }
+
+        $sql1 = "SELECT * FROM Users WHERE username = " . $username;
+        $sql2 = "SELECT * FROM Users WHERE password = " . md5($password);
+
+        $result1 = $mysqli->query($sql1);
+        if ($result1->affected_rows == 1)
+    }
+?>
+
 <!doctype html>
 <html class="no-js" lang="">
     <head>
@@ -22,7 +71,9 @@
                     color:#54A636;
                     font-family:"century gothic"
                 }
-
+                .error {
+                    color: #ff0000;
+                }
             </style>
 
             <form class="pure-form pure-form-aligned" method="POST" action="register.php">
@@ -31,23 +82,46 @@
 
                     <div class="pure-control-group">
                     <label for="username"><p>Username</p></label>
-                    <input id="username" type="text" name="username" placeholder="Username">
+                    <input id="username" type="text" name="username" placeholder="Username" <?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo "value='" . $_POST['username'] . "'"; } ?> >
                     </div>
+
+                    <?php 
+                        if ($invalidUsername == true) {
+                            echo '<p class="error">Usernames must be between 5 and 32 characters long.</p>';
+                        }
+                        if ($takenUsername == true) {
+                            echo '<p class="error">Username is taken. Please try another.</p>';
+                        }
+                    ?>
 
                     <div class="pure-control-group">
                     <label for="email"><p>Email</p></label>
-                    <input id="email" type="email" name="email" placeholder="Email">
+                    <input id="email" type="email" name="email" placeholder="Email" <?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo "value='" . $_POST['email'] . "'"; } ?>>
                     </div>
 
+                    <?php
+                        if ($takenEmail == true) {
+                            echo '<p class="error">Email is taken. Please try another.</p>';
+                        }
+                        if ($invalidEmail == true) {
+                            echo '<p class="error">Invalid email address.</p>';
+                        }
+                    ?>
 
                     <div class="pure-control-group">
                     <label for="password"><p>Password</p></label>
                     <input id="password" type="password" name="password" placeholder="Password">
                     </div>
 
+                    <?php
+                        if ($invalidPassword == true) {
+                            echo '<p class="error">Passwords must be between 5 and 32 characters long.</p>';
+                        }
+                    ?>
+
                     <div class="pure-control-group">
                     <label for="chapter"><p>Chapter Name</p></label>
-                    <input id="Chapter Name" type="text" name="chapter" placeholder="Chapter Name">
+                    <input id="Chapter Name" type="text" name="chapter" placeholder="Chapter Name" <?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo "value='" . $_POST['chapter'] . "'"; } ?>>
                     </div>
 
                     <style scoped>
