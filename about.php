@@ -9,27 +9,12 @@
 		<link rel="stylesheet" href="css/default.css">
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/default.css">
-		<style type="text/css"> 
-			
-	
-			
-		</style>
+		
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
-    <div class="pure-menu pure-menu-horizontal" align="right">
-        <a href="#" class="pure-menu-heading pure-menu-link">Home</a>
-        <ul class="pure-menu-list">
-            <li class="pure-menu-item"><a href="profile.php" class="pure-menu-link">Profile</a></li>
-            <li class="pure-menu-item"><a href="newRecover.php" class="pure-menu-link">Add Recovery</a></li>
-            <li class="pure-menu-item"><a href="logout.php" class="pure-menu-link">Logout</a></li>
-        </ul>
-    </div>
-
-
-
-
+		
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -38,6 +23,15 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
 
         <script src="js/main.js"></script>
+		
+		<div class="pure-menu pure-menu-horizontal" align="right">
+			<a href="#" class="pure-menu-heading pure-menu-link">Home</a>
+			<ul class="pure-menu-list">
+				<li class="pure-menu-item"><a href="profile.php" class="pure-menu-link">Profile</a></li>
+				<li class="pure-menu-item"><a href="newRecover.php" class="pure-menu-link">Add Recovery</a></li>
+				<li class="pure-menu-item"><a href="logout.php" class="pure-menu-link">Logout</a></li>
+			</ul>
+		</div>
         
 		<header>
 			<h1>
@@ -156,7 +150,7 @@
         </script>
         -->
 
-    <footer>
+		<footer>
             <div class="pure-g">
                 <div class="pure-u-8-24">
                     <img src='http://www.hackrpi.com/assets/logo.png'>
