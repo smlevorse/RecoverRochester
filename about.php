@@ -75,45 +75,23 @@
 
 			</div>
 			
-			<header>
-				<h1>
-					<img id="logo" src="img/leaf.svg" onerror="this.src='img/leaf.png'"></img>
-					Food Circulation Network
-				</h1>
-			</header>
-			
-			<section class="content">
-				<div class="pure-g">
-					<div class="pure-u-3-24"></div>
-					<div class="pure-u-10-24">
-						<p>
-							Every year, 1.3 billion tons of food is wasted around the world. In America alone, about 35 millions tons of food is thrown away each year.
-							1 in 6 Americans struggle with food insecurity. Every 1 in 4 children suffers from hunger. With 15% of Americans living in poverty, many 
-							people cannot afford to feed their families. Food Recovery Network is a nationwide effort to combat this problem, delivering excess 
-							food from college campuses to local shelters and soup kitchens.
-						</p>
-					</div>
-					<div class="pure-u-8-24">
-						<img src="https://pbs.twimg.com/media/B_buc10VAAEOWme.jpg" alt="food" class="img-responsive">
-					</div>
-				</div>
-			</section>
+		</section>
 					
-			<section class="content">
-				<div class="pure-g">
-					<div class="pure-u-3-24"></div>
-					<div class="pure-u-8-24">
-						<img src="https://pbs.twimg.com/media/CFELjhtVEAAneFY.jpg" alt="more food" class="img-responsive">
-					</div>
-					<div class="pure-u-10-24">
-						<p>
-							In the  Rochester area, there are roughly 30,000 people struggling with food insecurity. With colleges and restaurants in the area throwing
-							out roughly 1 ton of food a day, Recover Rochester works to recover that food and reallocate it to those in need.
-						</p>
-					</div>
+		<section class="content">
+			<div class="pure-g">
+				<div class="pure-u-3-24"></div>
+				<div class="pure-u-8-24">
+					<img src="https://pbs.twimg.com/media/CFELjhtVEAAneFY.jpg" alt="more food" class="img-responsive">
 				</div>
+				<div class="pure-u-10-24">
+					<p>
+						In the  Rochester area, there are roughly 30,000 people struggling with food insecurity. With colleges and restaurants in the area throwing
+						out roughly 1 ton of food a day, Recover Rochester works to recover that food and reallocate it to those in need.
+					</p>
+				</div>
+			</div>
 
-			</section>
+		</section>
 			
 			<section class="content">
 				<div class="pure-g">
