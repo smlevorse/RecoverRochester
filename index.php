@@ -6,18 +6,14 @@
         <title>FCN |  Food Circulation Network</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+		<link rel="stylesheet" href="css/default.css">
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
+		
+		
+
 
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-
-        <style type="text/css">
-
-        
-
-
-        </style>
 
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
@@ -26,6 +22,7 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+		<!--
         <p>Hello world! This is HTML5 Boilerplate.</p>
 
         <div class="pure-g">
@@ -33,12 +30,60 @@
         <div class="pure-u-1-3"><p>Thirds</p></div>
         <div class="pure-u-1-3"><p>Thirds</p></div>
         </div>
-
+		-->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
 
         <script src="js/main.js"></script>
         
+		<h1>Food Circulation Network</h1>
+		
+		<div class="parallax">
+			<div class="parallax_group">
+				<div class="parallax_layer parallax_layer_base">
+					<div class="content">
+						<p>
+							In the United States, food insecurity affects 1 in 6 people, or 50 million Americans. The Food Recovery Network is the largest 
+							student movement against food waste and hunger in America. With over 150 chapters spread across 39 states, the organization is quite large.
+							Recover Rochester, founded and run by RIT students, is one of FRN’s largest and most effective chapters. 
+						</p>
+					</div>
+				
+					<div class="bloat"></div>
+				
+					<div class="content">
+						<p>
+							Developed for HackRPI, Food Circulation Network is a tool for chapters of the Food Recover Network like Recover Rochester to track and 
+							analyze the food that they have collected and distributed. This tool helps local admins keep a record of distribution locations and how 
+							much of each food category is at each location. 
+						</p>
+					</div>
+				</div>
+				
+				<div class="parallax_layer parallax_layer_back">
+					<img class="pure-img" src="img/paralax_back.jpeg">
+				</div>
+			</div>
+			
+			
+		</div>
+		
+		<footer>
+			<div class="pure-g">
+				<div class="pure-u-1-3">
+					<img src='http://www.hackrpi.com/assets/logo.png'>
+				</div>
+				<div class="pure-u-1-3">
+					<p>
+						Created by:<br>
+						Nathan Holt<br>
+						Maranda DeSetafano<br>
+						Marissa Ballantyne<br>
+						Sean Levorse
+					</p>
+				</div>
+			</div>
+		</footer>
         
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
