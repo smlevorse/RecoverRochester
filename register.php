@@ -3,6 +3,7 @@
     $invalidUsername = false;
     $takenUsername = false;
     $invalidPassword = false;
+    $mismatchedPassword = false;
     $invalidEmail = false;
     $takenEmail = false;
 
@@ -28,6 +29,7 @@
         //Save the variables from the form:
         $username = $_POST['username'];
         $password = $_POST['password'];
+        $password2 = $_POST['passwordVerify'];
         $email = $_POST['email'];
         $chapter = $_POST['chapter'];
 
@@ -37,6 +39,10 @@
         }
         if (strlen($password) < 5 || strlen($password) > 32) {
             $invalidPassword = true;
+        }
+
+        if ($password != $password2) {
+            $mismatchedPassword = true;
         }
 
         $sql1 = "SELECT * FROM Users WHERE username = " . $username;
@@ -59,7 +65,7 @@
             $invalidEmail = true;
         }
 
-        if (!$invalidEmail && !$invalidUsername && !$invalidPassword && !$takenEmail && !$takenUsername) {
+        if (!$invalidEmail && !$invalidUsername && !$invalidPassword && !$mismatchedPassword && !$takenEmail && !$takenUsername) {
             //Good to go. Add them as a user.
             $sql = "INSERT INTO Users (username, email, password, num_contributions) VALUES ('" . $username . "', '" . $email . "', '" . md5($password) . "', 0)";
 
@@ -154,9 +160,15 @@
                     ?>
 
 					<div class="pure-control-group">
-                    <label for="password"><p>Re-Enter Password</p></label>
-                    <input id="password" type="password" name="password" placeholder="Password">
+                    <label for="passwordVerify"><p>Re-Enter Password</p></label>
+                    <input id="passwordVerify" type="password" name="passwordVerify" placeholder="Password">
                     </div>
+
+                    <?php
+                        if ($mismatchedPassword == true) {
+                            echo '<p class="error">Passwords must match.</p>';
+                        }
+                    ?>
 					
                     <div class="pure-control-group">
                     <label for="chapter"><p>Chapter Name</p></label>
