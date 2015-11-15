@@ -93,9 +93,10 @@
 
 
     </strong>
-
+	<div align=center>
     <div class="ct-chart" id="chart1" style="width: 300px;height: 300px;"></div>
     <div class="ct-chart" id="chart2" style="width: 700px;height: 300px;"></div>
+	</div>
     <script type="text/javascript">
         var data = {
           labels: [<?php echo "'" . implode("','", $categories) . "'";?>],
