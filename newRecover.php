@@ -60,7 +60,7 @@
         if (strlen($location_r) == 0 || strlen($location_r) > 32) {
             $invalidRecoveryLocation = True;
         }
-        if (strlen($location_d) == 0 || strlen($location_d) > 32) {
+        if (($delivered == 1 && strlen($location_d) == 0) || strlen($location_d) > 32) {
             $invalidDeliveryLocation = True;
         }
 
