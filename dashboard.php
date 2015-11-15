@@ -53,21 +53,7 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
 
         <script src="js/main.js"></script>
-        
-        <script>
-      <?php
-        /* ACTION REQUIRED: Enter your database information below */
-        
-        /* The host name in which the database is available */
-        $dbhost = "localhost";
-		$dbname = "seanmbed_fcn";
-		$dbusername = "seanmbed_admin";
-		$dbpass = "HackRPI2015";
 
-		$mysqli = new mysqli($dbhost, $dbusername, $dbpass, $dbname);
-
-        ?>
-			
     <strong>
 
         <!-- CODE BELOW CALCULATES TOTAL POUNDS RECOVERED AND PRINTS IT OUT-->
