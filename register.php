@@ -170,6 +170,12 @@
                         }
                     ?>
 					
+					
+					<div class="pure-control-group">
+                    <label for="name"><p>Full Name</p></label>
+                    <input id="Full Name" type="text" name="name" placeholder="Full Name">
+                    </div>
+					
                     <div class="pure-control-group">
                     <label for="chapter"><p>Chapter Name</p></label>
                     <input id="Chapter Name" type="text" name="chapter" placeholder="Chapter Name" <?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo "value='" . $_POST['chapter'] . "'"; } ?>>
