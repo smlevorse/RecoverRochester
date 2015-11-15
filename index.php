@@ -1,13 +1,10 @@
-<<<<<<< HEAD
+
 <?php 
 	session_start();
 	
 	?>
 
-<!doctype html>
-=======
-<!doctype html>
->>>>>>> ab967d89fd1c001639382d2a67d414f72b852d2f
+
 <html class="no-js" lang="">
     <head>
         <meta charset="utf-8">
