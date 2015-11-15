@@ -72,7 +72,7 @@
                                 echo "<td> No </td>";
                                 echo "<td> N/A </td>";
                             } else {
-                                echo "<td> N/A </td>";
+                                echo "<td>". $row['delivery_location'] . "</td>";
                                 echo "<td> Yes </td>";
                                 echo "<td>" . $row['date_delivered'] . "</td>";
                             }
