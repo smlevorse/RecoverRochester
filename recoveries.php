@@ -24,20 +24,28 @@
 
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/default.css">
 
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
-    <div class="pure-menu pure-menu-horizontal" align="right">
-        <a href="#" class="pure-menu-heading pure-menu-link">Home</a>
-        <ul class="pure-menu-list">
-            <li class="pure-menu-item"><a href="profile.php" class="pure-menu-link">Profile</a></li>
-            <li class="pure-menu-item"><a href="newRecover.php" class="pure-menu-link">Add Recovery</a></li>
-            <li class="pure-menu-item"><a href="logout.php" class="pure-menu-link">Logout</a></li>
-        </ul>
-    </div>
+    <?php 
+        if ((isset($_SESSION['username']) && isset($_SESSION['loggedIn']))) { 
+    ?>
+         <div class="pure-menu pure-menu-horizontal" align="right">
+            <a href="#" class="pure-menu-heading pure-menu-link">Home</a>
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="profile.php" class="pure-menu-link">Profile</a></li>
+                <li class="pure-menu-item"><a href="newRecover.php" class="pure-menu-link">Add Recovery</a></li>
+                <li class="pure-menu-item"><a href="logout.php" class="pure-menu-link">Logout</a></li>
+            </ul>
+        </div>
+    <?php  
+        }
+    ?>
+   
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -129,7 +137,6 @@
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
         </script>
         -->
-    </body>
     <footer>
             <div class="pure-g">
                 <div class="pure-u-8-24">
@@ -150,5 +157,8 @@
                 <div class="pure-u-5-24">
                     <a href="contact.php">Contact Us</a>
                 </div>
+            </div>
         </footer>
+    </body>
+
 </html>
