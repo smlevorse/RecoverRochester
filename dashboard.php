@@ -57,7 +57,7 @@
         <script src="js/main.js"></script>
 
     <strong>
-
+	<div align=center>
         <!-- CODE BELOW CALCULATES TOTAL POUNDS RECOVERED AND PRINTS IT OUT-->
         <?php
             $sql = "SELECT SUM(pounds_recovered) AS value_sum FROM rec_and_dist";
@@ -91,12 +91,19 @@
         ?>
         <!-- -->
 
-
+	</div>
     </strong>
 	<div align=center>
+	
+	<strong>
+	Percentages of Food Categories
     <div class="ct-chart" id="chart1" style="width: 300px;height: 300px;"></div>
+	
+	Food Recoveries per Day
     <div class="ct-chart" id="chart2" style="width: 700px;height: 300px;"></div>
+	</strong>
 	</div>
+	
     <script type="text/javascript">
         var data = {
           labels: [<?php echo "'" . implode("','", $categories) . "'";?>],
