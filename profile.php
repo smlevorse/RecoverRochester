@@ -17,14 +17,12 @@
         if (isset($_SESSION['username'])) {
             $username = $_SESSION['username'];
 
-            $sql = "SELECT name FROM users WHERE username='" . $username . "'";
+            $sql = "SELECT name FROM Users WHERE username='" . $username . "'";
             $result = $mysqli->query($sql);
 
-            if ($mysqli->affected_rows == 1) {
-                //User found.
-                $resultArray = $result->fetch_array();
-                $name = $resultArray['name'];
-            }
+            //User found.
+            $resultArray = $result->fetch_array();
+            $name = $resultArray['name'];
         } else {
             die("Must be logged in or searching for a user to view this page.");
         }
