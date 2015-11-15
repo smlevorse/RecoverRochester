@@ -24,8 +24,8 @@
 	height: 100vh;
 	overflow-x: hidden;
 	overflow-y: auto;
-	-webkit-perspective-origin-x:100%;
-	perspective-origin-x: 100%;
+	-webkit-perspective-origin-x:75%;
+	perspective-origin-x: 75%;
 }
 
 .parallax_layer {
@@ -45,8 +45,8 @@
 }
 
 .parallax_layer_back {
-	-webkit-transform: translateZ(-300px) scale(2);
-	transform: translateZ(-300px) scale(2);
+	-webkit-transform: translateZ(-300px) scale(4);
+	transform: translateZ(-300px) scale(4);
 	z-index: 3;
 	width:100%;
 	height:100%;
@@ -68,8 +68,30 @@
     /*transform: /*preserve-3d;*//*translate3d(700px, 0, -800px);*/
 }
 
+header {
+	background-color:#4A9130;
+	color:#fff;
+	text-align:center;
+	padding:8em;
+	margin:0;
+}
+
+header h1{
+	font-size:5em;
+}
+
 footer {
 	background-color:#652C00;
 	color:#fff;
+	padding:1em;
 	
+}
+
+.pure-menu {
+	background-color:#157007;
+	color:#fff;
+}
+
+.pure-menu-link:hover, .pure-menu-item:hover {
+	background-color:#2A531B;
 }

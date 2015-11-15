@@ -5,11 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>FCN |  Food Circulation Network</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width">
 		<link rel="stylesheet" href="css/default.css">
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
-		
 		
 
 
@@ -21,26 +20,29 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
-		<!--
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-
-        <div class="pure-g">
-        <div class="pure-u-1-3"><p>Thirds</p></div>
-        <div class="pure-u-1-3"><p>Thirds</p></div>
-        <div class="pure-u-1-3"><p>Thirds</p></div>
-        </div>
-		-->
+		
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
 
         <script src="js/main.js"></script>
         
-		<h1>Food Circulation Network</h1>
+		<header>
+			<h1>Food Circulation Network</h1>
+		</header>
+		
+		<div class="pure-menu pure-menu-horizontal">
+			<ul class="pure-menu-list">
+				<li class="pure-menu-item"><a href="login.php" class="pure-menu-link">Login</a></li>
+				<li class="pure-menu-item"><a href="register.php" class="pure-menu-link">Register</a></li>
+			</ul>
+		</div>
 		
 		<div class="parallax">
 			<div class="parallax_group">
 				<div class="parallax_layer parallax_layer_base">
+					
+					<div class="bloat"></div>
+				
 					<div class="content">
 						<p>
 							In the United States, food insecurity affects 1 in 6 people, or 50 million Americans. The Food Recovery Network is the largest 
@@ -61,6 +63,7 @@
 				</div>
 				
 				<div class="parallax_layer parallax_layer_back">
+					<div class="bloat">
 					<img class="pure-img" src="img/paralax_back.jpeg">
 				</div>
 			</div>
