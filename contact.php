@@ -5,6 +5,25 @@
 	$invalidemail = false;
 	$invalidmessage = false;
 	
+	$dbhost = "localhost";
+    $dbname = "seanmbed_fcn";
+    $dbusername = "seanmbed_admin";
+    $dbpass = "HackRPI2015";
+
+    $mysqli = new mysqli($dbhost, $dbusername, $dbpass, $dbname);
+    if ($mysqli->connect_errno) {
+        echo "Error: Could not connect to database.";
+        die();
+    }
+	
+	if (isset($_SESSION['username'])){
+		$sql = "SELECT name, email FROM Users WHERE username = '" . $_SESSION['username'] . "'";
+		$result = $mysqli->query($sql);
+			$resultarray = $result->fetch_array();
+			$name = $resultarray['name'];
+			$email = $resultarray['email'];
+	}
+	
     if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 		
@@ -82,7 +101,7 @@
 
                     <div class="pure-control-group">
                     <label for="name"><p>Name</p></label>
-                    <input id="name" type="text" name="name" placeholder="name"  <?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo "value='" . $_POST['name'] . "'"; } ?>>
+                    <input id="name" type="text" name="name" placeholder="name" <?php if (isset($name)){echo "value='".$name."'";} ?>  <?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo "value='" . $_POST['name'] . "'"; } ?>>
                     </div>
 
 					<?php 
@@ -93,7 +112,7 @@
 					
                     <div class="pure-control-group">
                     <label for="email"><p>Email</p></label>
-                    <input id="email" type="email" name="email" placeholder="Email"  <?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo "value='" . $_POST['email'] . "'"; } ?>>
+                    <input id="email" type="email" name="email" placeholder="Email" <?php if (isset($email)){echo "value='".$email."'";} ?> <?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo "value='" . $_POST['email'] . "'"; } ?>>
                     </div>
 
 					
