@@ -92,7 +92,7 @@
 
                 <fieldset class="pure-group">
                     <label for="message"><p>Message</p></label>
-                    <textarea class="pure-input-1-1" name="message" placeholder="Enter your Message"  <?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo "value='" . $_POST['message'] . "'"; } ?>></textarea>
+                    <textarea class="pure-input-1-1" name="message" placeholder="Enter your Message"><?php if ($_SERVER['REQUEST_METHOD'] == "POST") { echo $_POST['message']; } ?></textarea>
 
 				<?php 
                     if ($invalidmessage == true) {
@@ -102,8 +102,7 @@
 					
                     <button type="submit" class="button-xlarge pure-button">Submit</button>
                 </fieldset>
-				
-				
+							
 
 				
             </form>
