@@ -69,11 +69,14 @@
 			<div align=center>
 				<style>
 					p{
+						class: pure-control-group;
 						font-size:22pt;
 						color:#54A636;
 					}
 					#error {
-						color: #ff0000;
+						class: pure-control-group;
+						font-size:14pt;
+						color: #5A3B1A;
 					}
 				</style>
 
@@ -91,13 +94,27 @@
 						<label for="password"><p>Password</p></label>
 						<input id="password" type="password" name="password" placeholder="Password" />
 						</div>
+						
+						
+						<style>
+						
+							label{
+								font-size: 14pt
+							}
+						
+						</style>
+						
+						<label for="remember" class="pure-checkbox">
+						<input id="remember" type="checkbox"> Remember me
+						</label>
+						
 
 						<?php 
 							if ($invalidLogin == true) {
 								echo '<p id="error">Invalid username and/or password. Please try again.</p>';
 							}
 						?>
-s
+
 						<style scoped>
 							.button-xlarge{
 								font-size: 135%;
